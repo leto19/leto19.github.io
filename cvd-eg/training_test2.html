@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<script>
+  window.onload = () => {
+    document.querySelectorAll(".randlink").forEach(link =>
+      link.href += "?config=se_test_" +  Math.floor(Math.random() * 16) +".yaml"
+    );
+  };
+</script>
+<head>
+    <title>Listening Test Training</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        img {
+            display: block;
+        }
+        p {
+            margin: 5px;
+            }
+    </style>
+</head>
+<body>
+<h1>🎧 Listening Test Training 🎧</h1>
+<p><a href="info_sheet.pdf" target="_blank">Click here to download the information sheet for this listening test.</a></p>
+<p>In the following, you will be asked to rate audio files on a scale of 0 to 100, in terms of their quality.</p>
+
+<p>This page is designed to give you an indication of the range of audio quality you will encounter in the test.</p>
+
+<p> The three audio files on this page are of a low, medium and high quality respectively.</p>
+
+<p><b> Please use headphones to listen to the audio files here, and during the listening test.</b></p>
+
+<p>1 low quality</p><audio controls><source src="1 low.wav" type="audio/wav"></audio><br>
+<img src="1 low.png"><br><br>
+<p>2 medium quality</p><audio controls><source src="2 medium.wav" type="audio/wav"></audio><br>
+<img src="2 medium.png"><br><br>
+<p>3 high quality</p><audio controls><source src="3 high.wav" type="audio/wav"></audio><br>
+<img src="3 high.png"><br><br>
+<p style="font-size: 18px;"> <a href="participant.pdf" target="_blank">Click here to view keyboard shortcuts for the listening test software.</a></p><p style="font-size: 48px;"><b> <a class=randlink href="https://staffwww.dcs.shef.ac.uk/people/G.Close/webMUSHRA2/">Click here to continue to the listening test.</a></p>
+</body>
+</html>

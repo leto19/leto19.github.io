@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+  </link>
+
+  <title>Audio Examples Self Sup Loss </title>
+  <style>
+    .column {
+      float: left;
+      width: 20%;
+      border-right: 1px solid black;
+            
+        
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    table { border-collapse: collapse; }
+
+  </style>
+</head>
+
+<body>
+  <div style="padding:30px; padding-top:10px">
+    <h1>Audio Examples</h1>
+    <!--
+    <div class="row">
+
+      <div class=column>
+        <h3>P232_001</h3>
+        <p> Clean</p>
+        <audio controls>
+          <source src="audio/clean_testset_wav/p232_001.wav" type="audio/wav">
+        </audio>
+        <p>Noisy</p>
+        <audio controls>
+          <source src="audio/noisy_testset_wav/p232_001.wav" type="audio/wav">
+        </audio>
+        <p>Baseline MG+ Enhanced (PESQ Objective)</p>
+        <audio controls>
+          <source src="audio/enhanced_base_testset_wav/p232_001.wav" type="audio/wav">
+        </audio>
+        <p>Proposed MG- Enhanced (PESQ Objective)</p>
+        <audio controls>
+          <source src="audio/enhanced_proposed_testset_wav/p232_001.wav" type="audio/wav">
+        </audio>
+      </div>
+
+      <div class=column>
+      <h3>P232_191</h3>
+      <p>Clean</p>
+      <audio controls>
+        <source src="audio/clean_testset_wav/p232_191.wav" type="audio/wav">
+      </audio>
+      <p> Noisy</p>
+      <audio controls>
+        <source src="audio/noisy_testset_wav/p232_191.wav" type="audio/wav">
+      </audio>
+      <p>Baseline MG+ Enhanced (PESQ Objective) </p>
+      <audio controls>
+        <source src="audio/enhanced_base_testset_wav/p232_191.wav" type="audio/wav">
+      </audio>
+      <p>Proposed MG- Enhanced (PESQ Objective) </p>
+      <audio controls>
+        <source src="audio/enhanced_proposed_testset_wav/p232_191.wav" type="audio/wav">
+      </audio>
+      </div>
+
+      <div class=column>
+        <h3>P257_425</h3>
+        <p>Clean</p>
+        <audio controls>
+          <source src="audio/clean_testset_wav/p257_425.wav" type="audio/wav">
+        </audio>
+        <p> Noisy</p>
+        <audio controls>
+          <source src="audio/noisy_testset_wav/p257_425.wav" type="audio/wav">
+        </audio>
+        <p>Baseline MG+ Enhanced (PESQ Objective) </p>
+        <audio controls>
+          <source src="audio/enhanced_base_testset_wav/p257_425.wav" type="audio/wav">
+        </audio>
+        <p>Proposed MG- Enhanced (PESQ Objective) </p>
+        <audio controls>
+          <source src="audio/enhanced_proposed_testset_wav/p257_425.wav" type="audio/wav">
+        </audio>
+        </div>
+
+        noisy
+(nan, 1.2686865329742432)
+0.9106520452470208
+(2.220707374864061, 1.8990294604403997, 1.7026795847786442)
+base
+(nan, 2.4200193881988525)
+0.90588772916487
+(3.2070471449795352, 2.6390860569832086, 2.7698600318083724)
+proposed
+(nan, 2.701324224472046)
+0.8970290151488507
+(3.3598505399994494, 2.749327045743717, 2.995559468478271)
+
+
+noisy
+(nan, 1.3261674642562866)
+0.8736392223512438
+(2.9179037389791294, 1.953889019883222, 2.0670319863765987)
+base
+(nan, 2.7994701862335205)
+0.9080557884904369
+(3.7838168441162203, 2.866678935609867, 3.2539221996149568)
+proposed
+(nan, 2.993583917617798)
+0.8904568379179739
+(3.933759361683761, 2.931327236235661, 3.431119058346746)
+
+        -->
+        <div class=column>
+          <h3>p232_014</h3>
+          <p> Noise type:living      <br>      Mixing SNR: 2.5dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="living/2.5/p232_014/CLEAN_p232_014.wav" type="audio/wav">
+          </audio>
+          <p><b>Noisy</b></p>
+          <audio controls>
+            <source src="living/2.5/p232_014/NOISY_p232_014.wav" type="audio/wav">
+          </audio>
+          <p><b>Spectogram MSE Loss</b></p>
+          <audio controls>
+            <source src="living/2.5/p232_014/lstm-base_p232_014.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br>
+          <audio controls>
+            <source src="aliving/2.5/p232_014/lstm-hubert-ench-fixed_p232_014.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+<div class=column>
+            <h3>p257_430</h3>
+            <p> Noise type:living      <br>      Mixing SNR: 7.5dB</p>
+            <p><b>Clean</b></p>
+            <audio controls>
+              <source src="audio/clean_testset_wav/p257_430.wav" type="audio/wav">
+            </audio>
+            <p><b> Noisy</b> <br> 
+              PESQ score: 1.33<br>
+              STOI score: 0.87 <br>
+              Composite: 2.92, 1.95, 2.07
+            </p>
+            <audio controls>
+              <source src="audio/noisy_testset_wav/p257_430.wav" type="audio/wav">
+            </audio>
+            <p><b>Baseline MG+ Enhanced (PESQ Objective)</b> <br>
+               PESQ score: 2.80 <br>
+               STOI score: 0.91 <br>
+               Composite: 3.78, 2.87, 3.25
+               </p>
+            <audio controls>
+              <source src="audio/enhanced_base_testset_wav/p257_430.wav" type="audio/wav">
+            </audio>
+            <p><b>Proposed MG- Enhanced (PESQ Objective)</b><br>
+               PESQ score: 2.89 <br>
+               STOI score: 0.90 <br>
+               Composite: 3.89, 2.87, 3.35 </p>
+            <audio controls>
+              <source src="audio/enhanced_proposed_testset_wav/p257_430.wav" type="audio/wav">
+            </audio>
+            </div>
+<!--
+p257_083.wav bus 17.5
+p257_083.wav
+noisy
+(nan, 4.021091938018799)
+0.9981474876583504
+(5.0, 4.094248785987643, 4.753863140024028)
+base
+(nan, 3.86653208732605)
+0.9956352377041817
+(5.0, 3.7904713764823033, 4.568313703020101)
+proposed
+(nan, 3.9204468727111816)
+0.9874320622804246
+(5.0, 3.7564223690549463, 4.559219110569768)
+
+          -->
+         
+
+            <div class=column>
+              <h3>p257_421</h3>
+              <p> Noise type:psquare<br>Mixing SNR: 12.5dB</p>
+              <p><b>Clean</b></p>
+              <audio controls>
+                <source src="audio/clean_testset_wav/p257_421.wav" type="audio/wav">
+              </audio>
+              <p><b> Noisy</b> <br> 
+                PESQ score: 1.95<br>
+                STOI score: 0.86 <br>
+                Composite: 3.77, 2.53, 2.84
+              </p>
+              <audio controls>
+                <source src="audio/noisy_testset_wav/p257_421.wav" type="audio/wav">
+              </audio>
+              <p><b>Baseline MG+ Enhanced (PESQ Objective)</b> <br>
+                 PESQ score: 3.11 <br>
+                 STOI score: 0.85 <br>
+                 Composite: 4.48, 3.18, 3.78
+                 </p>
+              <audio controls>
+                <source src="audio/enhanced_base_testset_wav/p257_421.wav" type="audio/wav">
+              </audio>
+              <p><b>Proposed MG- Enhanced (PESQ Objective)</b><br>
+                 PESQ score: 3.04 <br>
+                 STOI score: 0.86 <br>
+                 Composite: 4.42, 3.26, 3.72 </p>
+              <audio controls>
+                <source src="audio/enhanced_proposed_testset_wav/p257_421.wav" type="audio/wav">
+              </audio>
+              </div>
+
+              <div class=column>
+                <h3>p232_178</h3>
+                <p> Noise type:cafe <br>Mixing SNR: 2.5dB</p>
+                <p><b>Clean</b></p>
+                <audio controls>
+                  <source src="audio/clean_testset_wav/p232_178.wav" type="audio/wav">
+                </audio>
+                <p><b> Noisy</b> <br> 
+                  PESQ score: 1.25<br>
+                  STOI score: 0.78
+                  <br>
+                  Composite: 2.01, 1.63, 1.50
+                </p>
+                <audio controls>
+                  <source src="audio/noisy_testset_wav/p232_178.wav" type="audio/wav">
+                </audio>
+                <p><b>Baseline MG+ Enhanced (PESQ Objective)</b> <br>
+                   PESQ score: 2.87 <br>
+                   STOI score: 0.84 <br>
+                   Composite: 2.53, 2.65, 2.61
+                   </p>
+                <audio controls>
+                  <source src="audio/enhanced_base_testset_wav/p232_178.wav" type="audio/wav">
+                </audio>
+                <p><b>Proposed MG- Enhanced (PESQ Objective)</b><br>
+                   PESQ score: 2.97 <br>
+                   STOI score: 0.84 <br>
+                   Composite: 2.75, 2.60, 2.79 </p>
+                <audio controls>
+                  <source src="audio/enhanced_proposed_testset_wav/p232_178.wav" type="audio/wav">
+                </audio>
+                </div>
+
+
+                <div class=column>
+                  <h3>p257_083</h3>
+                  <p> Noise type:bus      <br>      Mixing SNR: 17.5dB</p>
+                  <p><b>Clean</b></p>
+                  <audio controls>
+                    <source src="audio/clean_testset_wav/p257_083.wav" type="audio/wav">
+                  </audio>
+                  <p><b> Noisy</b> <br> 
+                    PESQ score: 4.02<br>
+                    STOI score: 0.99<br>
+                    Composite: 5.00, 4.09, 4.75
+                  </p>
+                  <audio controls>
+                    <source src="audio/noisy_testset_wav/p257_083.wav" type="audio/wav">
+                  </audio>
+                  <p><b>Baseline MG+ Enhanced (PESQ Objective)</b> <br>
+                     PESQ score: 3.87 <br>
+                     STOI score: 0.99 <br>
+                     Composite: 5.00, 3.79, 4.57
+                     </p>
+                  <audio controls>
+                    <source src="audio/enhanced_base_testset_wav/p257_083.wav" type="audio/wav">
+                  </audio>
+                  <p><b>Proposed MG- Enhanced (PESQ Objective)</b><br>
+                     PESQ score: 3.85 <br>
+                     STOI score: 0.99 <br>
+                     Composite: 5.00, 3.80, 4.56 </p>
+                  <audio controls>
+                    <source src="audio/enhanced_proposed_testset_wav/p257_083.wav" type="audio/wav">
+                  </audio>
+                  </div>
+
+
+            <!--
+            ./get_scores.sh p232_178.wav
+noisy
+(nan, 1.2451066970825195)
+0.784499445721997
+(2.007465143987597, 1.6299413159624612, 1.54313539878249)
+base
+(nan, 2.868729829788208)
+0.8394363309772358
+(2.525932046542881, 2.6454186456463353, 2.614333353742905)
+proposed
+(nan, 2.861487627029419)
+0.8366571143440277
+(3.1677548359165173, 2.601353348868341, 2.955454744751059)
+
+
+            
+            
+                    -->
+</body>
+
+</html>

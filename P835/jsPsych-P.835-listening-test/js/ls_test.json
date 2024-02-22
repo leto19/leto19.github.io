@@ -1,0 +1,213 @@
+
+all_trials =  [
+    {
+        "subset": 1,
+        "session": 0,
+        "file": "data/C2/p257_378.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 0,
+        "file": "data/C2/p257_378.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 0,
+        "file": "data/C2/p257_378.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 1,
+        "file": "data/C1/p257_390.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 1,
+        "file": "data/C1/p257_390.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 1,
+        "file": "data/C1/p257_390.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 2,
+        "file": "data/C2/p232_114.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 2,
+        "file": "data/C2/p232_114.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 2,
+        "file": "data/C2/p232_114.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 3,
+        "file": "data/C1/p257_421.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 3,
+        "file": "data/C1/p257_421.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 3,
+        "file": "data/C1/p257_421.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 4,
+        "file": "data/C1/p232_019.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 4,
+        "file": "data/C1/p232_019.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 4,
+        "file": "data/C1/p232_019.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 5,
+        "file": "data/C0/p232_071.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 5,
+        "file": "data/C0/p232_071.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 5,
+        "file": "data/C0/p232_071.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 6,
+        "file": "data/C0/p257_423.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 6,
+        "file": "data/C0/p257_423.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 6,
+        "file": "data/C0/p257_423.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 7,
+        "file": "data/C0/p257_127.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 7,
+        "file": "data/C0/p257_127.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 7,
+        "file": "data/C0/p257_127.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 8,
+        "file": "data/ref/p232_067.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 8,
+        "file": "data/ref/p232_067.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 8,
+        "file": "data/ref/p232_067.wav",
+        "scale": "OVRL",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 9,
+        "file": "data/C1/p257_349.wav",
+        "scale": "SIG",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 9,
+        "file": "data/C1/p257_349.wav",
+        "scale": "BAK",
+        "end_experiment": "false"
+    },
+    {
+        "subset": 1,
+        "session": 9,
+        "file": "data/C1/p257_349.wav",
+        "scale": "OVRL",
+        "end_experiment": "true"
+    }
+]

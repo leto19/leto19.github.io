@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  </link>
+
+  <title>Audio Examples Self Sup Loss </title>
+  <style>
+    .column {
+      float: left;
+      width: 25%;
+      border-right: 0.1px solid black;
+
+
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="padding:30px; padding-top:10px">
+<h1>Audio Examples for  'PERCEIVE AND PREDICT: SELF-SUPERVISED
+SPEECH REPRESENTATION BASED LOSS FUNCTIONS FOR SPEECH ENHANCEMENT'</h1>
+<p1>Sourced from VoiceBank-DEMAND testset.</p1>
+<br>
+
+
+        <div class=column>
+          <h3>p257_006</h3>
+          <p> Noise type: cafe      <br>      Mixing SNR: 17.5dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/CLEAN_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/NOISY_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/lstm-base_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/lstm-base-stoi-loss_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/lstm-base-sisdr_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/lstm-hubert-ench-fixed_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/lstm-hubert-full_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/lstm-xlsr-extract_features_p257_006.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/17.5/p257_006/lstm-xlsr-last_hidden_state_p257_006.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_007</h3>
+          <p> Noise type: cafe      <br>      Mixing SNR: 12.5dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/CLEAN_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/NOISY_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/lstm-base_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/lstm-base-stoi-loss_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/lstm-base-sisdr_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/lstm-hubert-ench-fixed_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/lstm-hubert-full_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/lstm-xlsr-extract_features_p257_007.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/12.5/p257_007/lstm-xlsr-last_hidden_state_p257_007.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe      <br>      Mixing SNR: 7.5dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/7.5/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_009</h3>
+          <p> Noise type: cafe      <br>      Mixing SNR: 2.5dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/CLEAN_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/NOISY_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/lstm-base_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/lstm-base-stoi-loss_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/lstm-base-sisdr_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/lstm-hubert-ench-fixed_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/lstm-hubert-full_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/lstm-xlsr-extract_features_p257_009.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe/2.5/p257_009/lstm-xlsr-last_hidden_state_p257_009.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+        <p> The following audio examples have been 'remixed' to show enhancement at more challenging SNR values than those present in the original VoiceBank-DEMAND testset.</p>
+        <br> 
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: -10.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-10.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: -5.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/-5.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: 0.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/0.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: 5.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/5.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: 10.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/10.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: 15.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/15.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: 20.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/20.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+        <div class=column>
+          <h3>p257_008</h3>
+          <p> Noise type: cafe_remix      <br>      Mixing SNR: 25.0dB</p>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/CLEAN_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> Noisy</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/NOISY_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline Specrogram MSE Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/lstm-base_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline STOI Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/lstm-base-stoi-loss_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Baseline SI-SDR Loss</b> <br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/lstm-base-sisdr_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed HuBERT Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/lstm-hubert-ench-fixed_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> HuBERT Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/lstm-hubert-full_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b>Proposed XLSR Encoder MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/lstm-xlsr-extract_features_p257_008.wav" type="audio/wav">
+          </audio>
+          <p><b> XLSR Output Layer MSE Loss</b><br></p>
+          <audio controls>
+            <source src="./cafe_remix/25.0/p257_008/lstm-xlsr-last_hidden_state_p257_008.wav" type="audio/wav">
+          </audio>
+          </div>
+          </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- bootstrap CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+  </link>
+
+  <title>Audio Examples Self Sup Loss </title>
+  <style>
+    .column {
+      float: left;
+      width: 20%;
+      border-right: 1px solid black;
+            
+        
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    table { border-collapse: collapse; }
+
+  </style>
+</head>
+
+<body>
+  <div style="padding:30px; padding-top:10px">
+    <h1>Audio Examples</h1>
+        <div class=column>
+          <p><b>Clean</b></p>
+          <audio controls>
+            <source src="S01_P01_0_noisy.wav" type="audio/wav">
+          </audio>
+          <p><b>Enhanced</b></p>
+          <audio controls>
+            <source src="S01_P01_0_sig_1.0.wav" type="audio/wav">
+          </audio>
+          <p><b>Enhanced (no GAN term)</b></p>
+          <audio controls>
+            <source src="S01_P01_0_no_GAN.wav" type="audio/wav">
+          </audio>
+          <p><b>"Enhanced" (GAN only) [Loud!!!]</b><br>
+          <audio controls>
+            <source src="S01_P01_0_sig_GAN_only.wav" type="audio/wav">
+          </audio>
+          </div>
+          
+
+
+<!--
+p257_083.wav bus 17.5
+p257_083.wav
+noisy
+(nan, 4.021091938018799)
+0.9981474876583504
+(5.0, 4.094248785987643, 4.753863140024028)
+base
+(nan, 3.86653208732605)
+0.9956352377041817
+(5.0, 3.7904713764823033, 4.568313703020101)
+proposed
+(nan, 3.9204468727111816)
+0.9874320622804246
+(5.0, 3.7564223690549463, 4.559219110569768)
+
+          -->
+         
+
+        
+
+            <!--
+            ./get_scores.sh p232_178.wav
+noisy
+(nan, 1.2451066970825195)
+0.784499445721997
+(2.007465143987597, 1.6299413159624612, 1.54313539878249)
+base
+(nan, 2.868729829788208)
+0.8394363309772358
+(2.525932046542881, 2.6454186456463353, 2.614333353742905)
+proposed
+(nan, 2.861487627029419)
+0.8366571143440277
+(3.1677548359165173, 2.601353348868341, 2.955454744751059)
+
+
+            
+            
+                    -->
+</body>
+
+</html>

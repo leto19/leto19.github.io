@@ -7,24 +7,25 @@
   <!-- bootstrap CSS-->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
-  <link href="col.css" rel="stylesheet"></link>
+  <link href="col.css" rel="stylesheet">
+  </link>
   <!--script to show the abstact-->
   <script>
-    function toggleAbstract(num){
-      var x = document.getElementById("abstract"+num);
+    function toggleAbstract(num) {
+      var x = document.getElementById("abstract" + num);
       if (x.style.display === "none") {
         x.style.display = "block";
         // change the text of the button to hide
-        document.getElementsByTagName("button")[num-1].innerHTML = "Hide Abstract";
+        document.getElementsByTagName("button")[num - 1].innerHTML = "Hide Abstract";
       } else {
         x.style.display = "none";
         // change the text of the button to show
-        document.getElementsByTagName("button")[num-1].innerHTML = "Show Abstract";
+        document.getElementsByTagName("button")[num - 1].innerHTML = "Show Abstract";
       }
     }
   </script>
   <style>
-    p{
+    p {
       font-size: 1.2em;
     }
   </style>
@@ -37,188 +38,380 @@
     <div class="row">
       <div class="col-sm-9">
         <h1>About George Close </h1>
-        <div style="padding-top:30px; padding-left:30px"><img src="me.jpg" alt="Me IRL" style="width:256px;height:256px;border-radius:50%;" >
+        <div style="padding-top:30px; padding-left:30px"><img src="me.jpg" alt="Me IRL"
+            style="width:256px;height:256px;border-radius:50%;">
           <p>Email: <a href="mailto:glclose1@sheffield.ac.uk"> glclose1@sheffield.ac.uk </a></p>
-        <p>
-          I am a PhD candidate at the <a  target= "_blank" href="https://www.sheffield.ac.uk">University of Sheffield</a>, as part of the
-          <a  target= "_blank" href="https://slt-cdt.ac.uk/">UKRI Centre for Doctoral Training in Speech and Language Technologies</a>.<br>
+          <p>
+            I am a PhD candidate at the <a target="_blank" href="https://www.sheffield.ac.uk">University of
+              Sheffield</a>, as part of the
+            <a target="_blank" href="https://slt-cdt.ac.uk/">UKRI Centre for Doctoral Training in Speech and Language
+              Technologies</a>.<br>
 
-          My supervisors are <a target= "_blank" href="https://www.sheffield.ac.uk/dcs/people/academic/stefan-goetze"> Dr. Stefan Goetze </a> and <a target= "_blank" href="https://www.sheffield.ac.uk/dcs/people/academic/thomas-hain"> Prof. Thomas Hain</a>.
-          <br>
-          My project is sponsored in part by <a target="_blank" href="https://www.toshiba.eu/pages/eu/Cambridge-Research-Laboratory/"> TOSHIBA Cambridge Research Laboratory</a>. 
-          <br>
-          I am due to graduate in January 2025.
-          <br>
-          <a href="mailto:glclose1@sheffield.ac.uk"> 📧 Click here to contact me 📧</a>
+            My supervisors are <a target="_blank" href="https://www.sheffield.ac.uk/dcs/people/academic/stefan-goetze">
+              Dr. Stefan Goetze </a> and <a target="_blank"
+              href="https://www.sheffield.ac.uk/dcs/people/academic/thomas-hain"> Prof. Thomas Hain</a>.
+            <br>
+            My project is sponsored in part by <a target="_blank"
+              href="https://www.toshiba.eu/pages/eu/Cambridge-Research-Laboratory/"> TOSHIBA Cambridge Research
+              Laboratory</a>.
+            <br>
+            I am due to graduate in January 2025.
+            <br>
+            <a href="mailto:glclose1@sheffield.ac.uk"> 📧 Click here to contact me 📧</a>
+          </p>
+          <h2>Interests</h2>
+
+        <p>
+        <ul style="font-size: 1.2em;">
+          <li>Neural Speech Enhancement / Noise Reduction</li>
+          <li>Psychoacoustically motivated approaches</li>
+          <li>Automatic Speech Recognition (ASR)</li>
+          <li>Speech Quality / Intelligibility assessment metrics and prediction</li>
+          <li>Human perception of audio</li>
+          <li>Neural systems for hearing aids and other low power devices</li>
+          <li> Self Supervised Speech Representations / Foundational models</li>
+          <li> Deep Fake Detection / Adversial attacks on neural networks.</li>
+        </ul>
+        <h2>Technical Skills</h2>
+        <ul style="font-size: 1.2em;">
+          <li>Python - PyTorch, Tensorflow, SciPy, SpeechBrain </li>
+          <li>HuggingFace / OpenAI API</li>
+          <li>Git / GitHub</li>
+          <li>High performance computing / GPU clusters</li>
+          <li>CuDA</li>
+          <li>MATLAB</li>
+          <li>Linux / BASH scripting</li>
+          <li>C++, Java, Haskell</li>
+        </ul>
         </p>
-        <h2>Papers and Publications</h2>
-          <ul>
-          <li><p><i>MetricGAN+/- Increasing Robustness of Noise Reduction on Unseen Data</i><br>
-          <a  target= "_blank" href="https://arxiv.org/abs/2203.12369"> arXiv </a>|
-          <a  target= "_blank" href="https://ieeexplore.ieee.org/document/9909682"> EUSIPCO 2022  </a>|
-          <a  target= "_blank" href="mg-minus.html"> Audio Examples</a><br>
-          <i><u>George Close</u>, Thomas Hain and Stefan Goetze<br></i>
-          <button id="button1" onclick="toggleAbstract(1)">Show Abstract</button>
-          <div id="abstract1" style="display: none;">
-          <i>Abstract</i>: Training of speech enhancement systems often does not incorporate knowledge of human perception and thus can lead to unnatural sounding results. Incorporating psychoacoustically motivated speech perception metrics as part of model training via a predictor network has recently gained interest. However, the performance of such predictors is limited by the distribution of metric scores that appear in the training data. In this work, we propose MetricGAN+/- (an extension of MetricGAN+, one such metric-motivated system) which introduces an additional network - a "de-generator" which attempts to improve the robustness of the prediction network (and by extension of the generator) by ensuring observation of a wider range of metric scores in training. Experimental results on the VoiceBank-DEMAND dataset show relative improvement in PESQ score of 3.8% (3.05 vs 3.22 PESQ score), as well as better generalisation to unseen noise and speech.
-          </div>
+
+
+        <h2>Qualifications / Work Experience</h2>
+        <ul>
+          <li><p>Yamaha Research and Development (Internship)<br>
+            Hammamatsu, Japan
+            <br> May 2024 - August 2024
+          </p></li>
+          <li><p>PhD Computer Science<br>
+            University of Sheffield, UK <br>
+             2020-2024</p></li>
+
+          <li><p>BSc Computer Science (First Class Honours)<br>
+          Cardiff University, UK <br>
+           2017-2020</p></li>
+          <!-- <li><p style="font-size: xx-small;">A-Level: Mathematics, Further Mathematics, Computing, Electronics.<br> -->
         </p></li>
-          <li><p><i>Non-intrusive Speech Intelligibility Metric Prediction for Hearing Impaired Individuals - Clarity Prediction Challege 1</i><br>
-            <a  target= "_blank" href="https://www.isca-speech.org/archive/interspeech_2022/close22_interspeech.html"> INTERSPEECH 2022</a><br>
-            <i><u>George Close</u>, Samuel Hollands, Thomas Hain and Stefan Goetze</i><br>
-            <button id="button2" onclick="toggleAbstract(2)">Show Abstract</button>
-            <div id="abstract2" style="display: none;">
-            <i>Abstract</i>: This paper proposes neural models to predict Speech Intelligibility (SI),both by prediction of established SI metrics and of human speech recognition (HSR) on the 1st Clarity Prediction Challenge. Both intrusive and non-intrusive predictors for intrusive SI metrics are trained, then fine tuned on the HSR ground truth. Results are reported on a number of SI metrics, and the model choice for the Clarity challenge submission is explained. Additionally, the relationship between the SI scores in the data and commonly used signal processing metrics which approximate SI are analysed, and some issues emerging from this relationship discussed. It is found that intrusive neural predictors of SI metrics when finetuned on the true HSR scores outperform the non neural challenge baseline.
-            </div>
-          </p></li>
-            <li><p><i>PAMGAN+/-: Improving Phase Aware Speech Enhancement Performance via Expanded Discriminator Training</i><br>
-              <a  target= "_blank" href="https://www.aes.org/e-lib/browse.cfm?elib=22063"> 154th AES Convention Europe 2023</a><br>
-              <b> 🏆 WINNER: STUDENT TECHNICAL PAPER AWARD </b><br>
-              <i><u>George Close</u>, Thomas Hain and Stefan Goetze<br></i>
-              <button id=button3 onclick="toggleAbstract(3)">Show Abstract</button>
+        </ul>
+
+        
+        <!-- <p> Before starting at the CDT, I had completed an BSc undergraduate degree in Computer Science from <a
+            target="_blank" href="https://www.cardiff.ac.uk">Cardiff University</a>, with a First Class Honours.
+          <br> -->
+          <!-- I have A-Level qualifications in Mathematics, Futher Mathematics, Computing and Electronics.  -->
+        </p>
+          <h2>Papers and Publications</h2>
+          <p>I am an author on 12 papers, of which 9 I am first author. <br>
+             <!-- My work has been published at a number of internationally recognoised conferences<br> -->
+              <!-- including ICASSP, Interspeech and AES -->
+            </p>
+          <ul>
+            <li>
+              <p><i>MetricGAN+/- Increasing Robustness of Noise Reduction on Unseen Data</i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2203.12369"> arXiv </a>|
+                <a target="_blank" href="https://ieeexplore.ieee.org/document/9909682"> EUSIPCO 2022 </a>|
+                <a target="_blank" href="mg-minus.html"> Audio Examples</a><br>
+                <i><u>George Close</u>, Thomas Hain and Stefan Goetze<br></i>
+                <button id="button1" onclick="toggleAbstract(1)">Show Abstract</button>
+              <div id="abstract1" style="display: none;">
+                <i>Abstract</i>: Training of speech enhancement systems often does not incorporate knowledge of human
+                perception and thus can lead to unnatural sounding results. Incorporating psychoacoustically motivated
+                speech perception metrics as part of model training via a predictor network has recently gained
+                interest. However, the performance of such predictors is limited by the distribution of metric scores
+                that appear in the training data. In this work, we propose MetricGAN+/- (an extension of MetricGAN+, one
+                such metric-motivated system) which introduces an additional network - a "de-generator" which attempts
+                to improve the robustness of the prediction network (and by extension of the generator) by ensuring
+                observation of a wider range of metric scores in training. Experimental results on the VoiceBank-DEMAND
+                dataset show relative improvement in PESQ score of 3.8% (3.05 vs 3.22 PESQ score), as well as better
+                generalisation to unseen noise and speech.
+              </div>
+              </p>
+            </li>
+            <li>
+              <p><i>Non-intrusive Speech Intelligibility Metric Prediction for Hearing Impaired Individuals - Clarity
+                  Prediction Challege 1</i><br>
+                <a target="_blank" href="https://www.isca-speech.org/archive/interspeech_2022/close22_interspeech.html">
+                  INTERSPEECH 2022</a><br>
+                <i><u>George Close</u>, Samuel Hollands, Thomas Hain and Stefan Goetze</i><br>
+                <button id="button2" onclick="toggleAbstract(2)">Show Abstract</button>
+              <div id="abstract2" style="display: none;">
+                <i>Abstract</i>: This paper proposes neural models to predict Speech Intelligibility (SI),both by
+                prediction of established SI metrics and of human speech recognition (HSR) on the 1st Clarity Prediction
+                Challenge. Both intrusive and non-intrusive predictors for intrusive SI metrics are trained, then fine
+                tuned on the HSR ground truth. Results are reported on a number of SI metrics, and the model choice for
+                the Clarity challenge submission is explained. Additionally, the relationship between the SI scores in
+                the data and commonly used signal processing metrics which approximate SI are analysed, and some issues
+                emerging from this relationship discussed. It is found that intrusive neural predictors of SI metrics
+                when finetuned on the true HSR scores outperform the non neural challenge baseline.
+              </div>
+              </p>
+            </li>
+            <li>
+              <p><i>PAMGAN+/-: Improving Phase Aware Speech Enhancement Performance via Expanded Discriminator
+                  Training</i><br>
+                <a target="_blank" href="https://www.aes.org/e-lib/browse.cfm?elib=22063"> 154th AES Convention Europe
+                  2023</a><br>
+                <b> 🏆 WINNER: STUDENT TECHNICAL PAPER AWARD </b><br>
+                <i><u>George Close</u>, Thomas Hain and Stefan Goetze<br></i>
+                <button id=button3 onclick="toggleAbstract(3)">Show Abstract</button>
               <div id="abstract3" style="display: none;">
-              <i>Abstract</i>: Recent speech enhancement work, which makes use of neural networks trained with a loss derived in part using an adversarial metric prediction network, has shown to be very effective. However, by limiting the data used to train this metric prediction network to only the clean reference and the output of the speech enhancement network, only a limited range of the metric is learnt. Additionally, such speech enhancement systems are limited because they typically operate solely over magnitude spectrogram representations so they do not encode phase information. In this work, recent developments for phase-aware speech enhancement in such an adversarial framework are expanded in two ways to enable the metric prediction network to learn a full range of metric scores. Firstly, the metric predictor is also exposed to unenhanced ’noisy’ data during training. Furthermore, an additional network is introduced and trained alongside which attempts to produce outputs with a fixed ’lower’ target metric score, and expose the metric predictor to these ’de-enhanced’ outputs. It is found that performance increases versus a baseline system utilising a magnitude spectrogram speech enhancement network.
+                <i>Abstract</i>: Recent speech enhancement work, which makes use of neural networks trained with a loss
+                derived in part using an adversarial metric prediction network, has shown to be very effective. However,
+                by limiting the data used to train this metric prediction network to only the clean reference and the
+                output of the speech enhancement network, only a limited range of the metric is learnt. Additionally,
+                such speech enhancement systems are limited because they typically operate solely over magnitude
+                spectrogram representations so they do not encode phase information. In this work, recent developments
+                for phase-aware speech enhancement in such an adversarial framework are expanded in two ways to enable
+                the metric prediction network to learn a full range of metric scores. Firstly, the metric predictor is
+                also exposed to unenhanced ’noisy’ data during training. Furthermore, an additional network is
+                introduced and trained alongside which attempts to produce outputs with a fixed ’lower’ target metric
+                score, and expose the metric predictor to these ’de-enhanced’ outputs. It is found that performance
+                increases versus a baseline system utilising a magnitude spectrogram speech enhancement network.
               </div>
-            </p></li>
-          <li><p><i>Perceive and predict: Self-Supervised Speech Representation Based Loss Functions for Speech Enhancement</i><br>
-            <a  target= "_blank" href="https://arxiv.org/abs/2301.04388"> arXiv </a>|
-             <a target="_blank" href="https://ieeexplore.ieee.org/document/10095666"> ICASSP 2023</a> | 
-            <a  target= "_blank" href="icassp/audio_egs.html"> Audio Examples </a><br>
-            <i><u>George Close</u>, William Ravenscroft, Thomas Hain and Stefan Goetze</i><br>
-            <button id="button5" onclick="toggleAbstract(4)">Show Abstract</button>
-            <div id="abstract4" style="display: none;">
-            <i>Abstract</i>: Recent work in the domain of speech enhancement has explored the use of self-supervised speech representations to aid in the training of neural speech enhancement models. However, much of this work focuses on using the deepest or final outputs of self supervised speech representation models, rather than the earlier feature encodings. The use of self supervised representations in such a way is often not fully motivated. In this work it is shown that the distance between the feature encodings of clean and noisy speech correlate strongly with psychoacoustically motivated measures of speech quality and intelligibility, as well as with human Mean Opinion Score (MOS) ratings. Experiments using this distance as a loss function are performed and improved performance over the use of STFT spectrogram distance based loss as well as other common loss functions from speech enhancement literature is demonstrated using objective measures such as perceptual evaluation of speech quality (PESQ) and short-time objective intelligibility (STOI).
-            </div>
-          </p></li>
-            <li><p><i>The Effect of Spoken Language on Speech Enhancement using Self-Supervised Speech Representation Loss Functions</i><br>
-              <a  target= "_blank" href="https://arxiv.org/abs/2307.14502"> arXiv </a>|
-              <a target="_blank" href="https://ieeexplore.ieee.org/document/10248166"> WASPAA 2023 </a> | 
-              <a  target= "_blank" href="https://github.com/leto19/CommonVoice-DEMAND"> GitHub </a><br>
-              <i><u>George Close</u>, Thomas Hain, Stefan Goetze</i><br>
-              <button onclick="toggleAbstract(5)">Show Abstract</button>
+              </p>
+            </li>
+            <li>
+              <p><i>Perceive and predict: Self-Supervised Speech Representation Based Loss Functions for Speech
+                  Enhancement</i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2301.04388"> arXiv </a>|
+                <a target="_blank" href="https://ieeexplore.ieee.org/document/10095666"> ICASSP 2023</a> |
+                <a target="_blank" href="icassp/audio_egs.html"> Audio Examples </a><br>
+                <i><u>George Close</u>, William Ravenscroft, Thomas Hain and Stefan Goetze</i><br>
+                <button id="button5" onclick="toggleAbstract(4)">Show Abstract</button>
+              <div id="abstract4" style="display: none;">
+                <i>Abstract</i>: Recent work in the domain of speech enhancement has explored the use of self-supervised
+                speech representations to aid in the training of neural speech enhancement models. However, much of this
+                work focuses on using the deepest or final outputs of self supervised speech representation models,
+                rather than the earlier feature encodings. The use of self supervised representations in such a way is
+                often not fully motivated. In this work it is shown that the distance between the feature encodings of
+                clean and noisy speech correlate strongly with psychoacoustically motivated measures of speech quality
+                and intelligibility, as well as with human Mean Opinion Score (MOS) ratings. Experiments using this
+                distance as a loss function are performed and improved performance over the use of STFT spectrogram
+                distance based loss as well as other common loss functions from speech enhancement literature is
+                demonstrated using objective measures such as perceptual evaluation of speech quality (PESQ) and
+                short-time objective intelligibility (STOI).
+              </div>
+              </p>
+            </li>
+            <li>
+              <p><i>The Effect of Spoken Language on Speech Enhancement using Self-Supervised Speech Representation Loss
+                  Functions</i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2307.14502"> arXiv </a>|
+                <a target="_blank" href="https://ieeexplore.ieee.org/document/10248166"> WASPAA 2023 </a> |
+                <a target="_blank" href="https://github.com/leto19/CommonVoice-DEMAND"> GitHub </a><br>
+                <i><u>George Close</u>, Thomas Hain, Stefan Goetze</i><br>
+                <button onclick="toggleAbstract(5)">Show Abstract</button>
               <div id="abstract5" style="display: none;">
-              <i>Abstact</i>: Recent work in the field of speech enhancement (SE) has involved the use of self-supervised speech representations (SSSRs) as feature transformations in loss functions. However, in prior work, very little attention has been paid to the relationship between the language of the audio used to train the self-supervised representation and that used to train the SE system. Enhancement models trained using a loss function which incorporates a self-supervised representation that shares exactly the language of the noisy data used to train the SE system show better performance than those which do not match exactly. This may lead to enhancement systems which are language specific and as such do not generalise well to unseen languages, unlike models trained using traditional spectrogram or time domain loss functions. In this work, SE models are trained and tested on a number of different languages, with self-supervised representations which themselves are trained using different language combinations and with differing network structures as loss function representations. These models are then tested across unseen languages and their performances are analysed. It is found that the training language of the self-supervised representation appears to have a minor effect on enhancement performance, the amount of training data of a particular language, however, greatly affects performance.
+                <i>Abstact</i>: Recent work in the field of speech enhancement (SE) has involved the use of
+                self-supervised speech representations (SSSRs) as feature transformations in loss functions. However, in
+                prior work, very little attention has been paid to the relationship between the language of the audio
+                used to train the self-supervised representation and that used to train the SE system. Enhancement
+                models trained using a loss function which incorporates a self-supervised representation that shares
+                exactly the language of the noisy data used to train the SE system show better performance than those
+                which do not match exactly. This may lead to enhancement systems which are language specific and as such
+                do not generalise well to unseen languages, unlike models trained using traditional spectrogram or time
+                domain loss functions. In this work, SE models are trained and tested on a number of different
+                languages, with self-supervised representations which themselves are trained using different language
+                combinations and with differing network structures as loss function representations. These models are
+                then tested across unseen languages and their performances are analysed. It is found that the training
+                language of the self-supervised representation appears to have a minor effect on enhancement
+                performance, the amount of training data of a particular language, however, greatly affects performance.
               </div>
-            </p></li>
-              <li><p><i>Non Intrusive Intelligibility Predictor for Hearing Impaired Individuals using Self Supervised Speech Representations</i><br>
-                <a  target= "_blank" href="https://arxiv.org/abs/2307.13423"> arXiv </a> | <a target="_blank" href="https://sites.google.com/g.ntu.edu.tw/sparks/presented-papers"> SPARKS Workshop 2023 </a><br>
+              </p>
+            </li>
+            <li>
+              <p><i>Non Intrusive Intelligibility Predictor for Hearing Impaired Individuals using Self Supervised
+                  Speech Representations</i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2307.13423"> arXiv </a> | <a target="_blank"
+                  href="https://sites.google.com/g.ntu.edu.tw/sparks/presented-papers"> SPARKS Workshop 2023 </a><br>
                 <i><u>George Close</u>, Thomas Hain and Stefan Goetze</i><br>
                 <button onclick="toggleAbstract(6)">Show Abstract</button>
-                <div id="abstract6" style="display: none;">
-                <i>Abstract</i>: Self-supervised speech representations (SSSRs) have been successfully applied to a number of speech-processing tasks, e.g. as feature extractor for speech quality (SQ) prediction, which is, in turn, relevant for assessment and training speech enhancement systems for users with normal or impaired hearing. However, exact knowledge of why and how quality-related information is encoded well in such representations remains poorly understood. In this work, techniques for non-intrusive prediction of SQ ratings are extended to the prediction of intelligibility for hearing-impaired users. It is found that self-supervised representations are useful as input features to non-intrusive prediction models, achieving competitive performance to more complex systems. A detailed analysis of the performance depending on Clarity Prediction Challenge 1 listeners and enhancement systems indicates that more data might be needed to allow generalisation to unknown systems and (hearing-impaired) individuals.
-                </div>
-              </p></li>
-            </p></li>
-            <li><p><i>CMGAN+/+: The University of Sheffield CHiME-7 UDASE Challenge Speech Enhancement System</i><br>
-              <b>🏆 Entry to <a target= "_blank" href="https://www.chimechallenge.org/challenges/chime7/task2/results"> CHiME 2024 UDASE Task </a></b><br>
-              <i><u>George Close</u>, William Ravenscroft, Thomas Hain and Stefan Goetze</i><br>
-              <button onclick="toggleAbstract(7)">Show Abstract</button>
-              <div id="abstract7" style="display: none;">
-              <i>Abstract</i>: The CHiME-7 unsupervised domain adaptation speech enhancement (UDASE) challenge targets in-domain adaptation to unlabelled speech data. This paper describes the University of Sheffield team’s system submitted for the challenge. A generative adversarial network (GAN) structure is employed as op- posed to the unsupervised RemixIT method proposed in the baseline system. The system uses a conformer-based metric GAN (CMGAN) structure. The discriminator part of the GAN is trained to predict the output of a DNSMOS model. Data aug- mentation strategies are employed which enable training on historical training data as well as miscellaneous data from an additional generator. The proposed approach, referred to as CM- GAN+/+, achieves significant improvement in DNSMOS evaluation metrics with the best proposed system achieving 3.40 OVR-MOS, an 18% improvement over the baselines.
+              <div id="abstract6" style="display: none;">
+                <i>Abstract</i>: Self-supervised speech representations (SSSRs) have been successfully applied to a
+                number of speech-processing tasks, e.g. as feature extractor for speech quality (SQ) prediction, which
+                is, in turn, relevant for assessment and training speech enhancement systems for users with normal or
+                impaired hearing. However, exact knowledge of why and how quality-related information is encoded well in
+                such representations remains poorly understood. In this work, techniques for non-intrusive prediction of
+                SQ ratings are extended to the prediction of intelligibility for hearing-impaired users. It is found
+                that self-supervised representations are useful as input features to non-intrusive prediction models,
+                achieving competitive performance to more complex systems. A detailed analysis of the performance
+                depending on Clarity Prediction Challenge 1 listeners and enhancement systems indicates that more data
+                might be needed to allow generalisation to unknown systems and (hearing-impaired) individuals.
               </div>
-              <li><p><i>Multi-CMGAN+/+: Leveraging Multi-Objective Speech Quality Metric Prediction for Speech Enhancement </i><br>
-                <a target= "_blank" href="https://arxiv.org/abs/2312.08979">arXiv </a>| <a target="_blank" href="https://ieeexplore.ieee.org/document/10448343">ICASSP 2024</a> | <a target="_blank" href="https://github.com/leto19/MultiMetricGANplusplus"> GitHub </a><br>
+              </p>
+            </li>
+            </p>
+            </li>
+            <li>
+              <p><i>CMGAN+/+: The University of Sheffield CHiME-7 UDASE Challenge Speech Enhancement System</i><br>
+                <a target="_blank" href="https://www.chimechallenge.org/challenges/chime7/task2/documents/Close_CMGAN++.pdf">Technical Report</a>
+                <a target="_blank" href="https://www.chimechallenge.org/challenges/chime7/task2/results"><br>
+                  <b>🏆 Entry to CHiME 2024 UDASE Task </a></b><br>
+                <i><u>George Close</u>, William Ravenscroft, Thomas Hain and Stefan Goetze</i><br>
+                <button onclick="toggleAbstract(7)">Show Abstract</button>
+              <div id="abstract7" style="display: none;">
+                <i>Abstract</i>: The CHiME-7 unsupervised domain adaptation speech enhancement (UDASE) challenge targets
+                in-domain adaptation to unlabelled speech data. This paper describes the University of Sheffield team’s
+                system submitted for the challenge. A generative adversarial network (GAN) structure is employed as op-
+                posed to the unsupervised RemixIT method proposed in the baseline system. The system uses a
+                conformer-based metric GAN (CMGAN) structure. The discriminator part of the GAN is trained to predict
+                the output of a DNSMOS model. Data aug- mentation strategies are employed which enable training on
+                historical training data as well as miscellaneous data from an additional generator. The proposed
+                approach, referred to as CM- GAN+/+, achieves significant improvement in DNSMOS evaluation metrics with
+                the best proposed system achieving 3.40 OVR-MOS, an 18% improvement over the baselines.
+              </div>
+            <li>
+              <p><i>Multi-CMGAN+/+: Leveraging Multi-Objective Speech Quality Metric Prediction for Speech Enhancement
+                </i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2312.08979">arXiv </a>| <a target="_blank"
+                  href="https://ieeexplore.ieee.org/document/10448343">ICASSP 2024</a> | <a target="_blank"
+                  href="https://github.com/leto19/MultiMetricGANplusplus"> GitHub </a><br>
                 <i><u>George Close</u>, Thomas Hain and Stefan Goetze</i><br>
                 <button onclick="toggleAbstract(8)">Show Abstract</button>
-                <div id="abstract8" style="display: none;">
-                <i>Abstract</i>: Neural network based approaches to speech enhancement have shown to be particularly powerful, being able to leverage a data-driven approach to result in a significant performance gain versus other approaches. Such approaches are reliant on artificially created labelled training data such that the neural model can be trained using intrusive loss functions which compare the output of the model with clean reference speech. Performance of such systems when enhancing real-world audio often suffers relative to their performance on simulated test data. In this work, a non-intrusive multi-metric prediction approach is introduced, wherein a model trained on artificial labelled data using inference of an adversarially trained metric prediction neural network. The proposed approach shows improved performance versus state-of-the-art systems on the recent CHiME-7 challenge unsupervised domain adaptation speech enhancement (UDASE) task evaluation sets.
-                </div>
-              </p></li>
-            </p></li>
-            <li><p><i>Non-Intrusive Speech Intelligibility Prediction for Hearing-Impaired Users using Intermediate ASR Features and Human Memory Models</i><br>    
-              <a  target= "_blank" href="https://claritychallenge.org/clarity2023-workshop/papers/CPC2_E002_report.pdf"> Techincal Report </a> |<a target="_blank" href="https://arxiv.org/abs/2401.13611"> arXiv </a> | <a target="_blank" href=https://ieeexplore.ieee.org/document/10447597/authors">ICASSP 2024</a><br>
-              <b>🏆 2nd Place in <a target= "_blank" href="https://claritychallenge.org/clarity2023-workshop/results.html"> Clarity Prediction Challenge 2 </a></b><br>
-              <i>Rhiannon Mogridge, <u>George Close</u>, Robert Sutherland, Thomas Hain, Jon Barker, Stefan Goetze and Anton Ragni</i><br>
-              <button onclick="toggleAbstract(9)">Show Abstract</button>
-              <div id="abstract9" style="display: none;">
-              <i>Abstact</i>: Neural networks have been successfully used for non-intrusive speech intelligibility prediction. Recently, the use of feature representations sourced from intermediate layers of pre-trained self-supervised and weakly-supervised models has been found to be particularly useful for this task. This work combines the use of Whisper ASR decoder layer representations as neural network input features with an exemplar-based, psychologically motivated model of human memory to predict human intelligibility ratings for hearing-aid users. Substantial performance improvement over an established intrusive HASPI baseline system is found, including on enhancement systems and listeners unseen in the training data, with a root mean squared error of 25.3 compared with the baseline of 28.7.
+              <div id="abstract8" style="display: none;">
+                <i>Abstract</i>: Neural network based approaches to speech enhancement have shown to be particularly
+                powerful, being able to leverage a data-driven approach to result in a significant performance gain
+                versus other approaches. Such approaches are reliant on artificially created labelled training data such
+                that the neural model can be trained using intrusive loss functions which compare the output of the
+                model with clean reference speech. Performance of such systems when enhancing real-world audio often
+                suffers relative to their performance on simulated test data. In this work, a non-intrusive multi-metric
+                prediction approach is introduced, wherein a model trained on artificial labelled data using inference
+                of an adversarially trained metric prediction neural network. The proposed approach shows improved
+                performance versus state-of-the-art systems on the recent CHiME-7 challenge unsupervised domain
+                adaptation speech enhancement (UDASE) task evaluation sets.
               </div>
-            </p></li>
-              <li><p><i>Hallucination in Perceptual Metric-Driven Speech Enhancement Networks</i><br>
-                <a  target= "_blank" href="https://arxiv.org/abs/2403.11732"> arXiv </a>|
+              </p>
+            </li>
+            </p>
+            </li>
+            <li>
+              <p><i>Non-Intrusive Speech Intelligibility Prediction for Hearing-Impaired Users using Intermediate ASR
+                  Features and Human Memory Models</i><br>
+                <a target="_blank" href="https://claritychallenge.org/clarity2023-workshop/papers/CPC2_E002_report.pdf">
+                  Techincal Report </a> |<a target="_blank" href="https://arxiv.org/abs/2401.13611"> arXiv </a> | <a
+                  target="_blank" href=https://ieeexplore.ieee.org/document/10447597/authors">ICASSP 2024</a><br>
+                <b>🏆 2nd Place in <a target="_blank"
+                    href="https://claritychallenge.org/clarity2023-workshop/results.html"> Clarity Prediction Challenge
+                    2 </a></b><br>
+                <i>Rhiannon Mogridge, <u>George Close</u>, Robert Sutherland, Thomas Hain, Jon Barker, Stefan Goetze and
+                  Anton Ragni</i><br>
+                <button onclick="toggleAbstract(9)">Show Abstract</button>
+              <div id="abstract9" style="display: none;">
+                <i>Abstact</i>: Neural networks have been successfully used for non-intrusive speech intelligibility
+                prediction. Recently, the use of feature representations sourced from intermediate layers of pre-trained
+                self-supervised and weakly-supervised models has been found to be particularly useful for this task.
+                This work combines the use of Whisper ASR decoder layer representations as neural network input features
+                with an exemplar-based, psychologically motivated model of human memory to predict human intelligibility
+                ratings for hearing-aid users. Substantial performance improvement over an established intrusive HASPI
+                baseline system is found, including on enhancement systems and listeners unseen in the training data,
+                with a root mean squared error of 25.3 compared with the baseline of 28.7.
+              </div>
+              </p>
+            </li>
+            <li>
+              <p><i>Hallucination in Perceptual Metric-Driven Speech Enhancement Networks</i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2403.11732"> arXiv </a>|
                 Accepted @ EUSIPCO 2024|
-                <a  target= "_blank" href="nisqa_se_demo.html"> Listening Test Examples</a><br>
+                <a target="_blank" href="nisqa_se_demo.html"> Listening Test Examples</a><br>
                 <i><u>George Close</u>, Thomas Hain and Stefan Goetze<br></i>
                 <button onclick="toggleAbstract(10)">Show Abstract</button>
-                <div id="abstract10" style="display: none;">
-                  <i>Abstract</i>: Within the area of speech enhancement, there is an ongoing interest in the creation of neural systems which explicitly aim to improve the perceptual quality of the processed audio. In concert with this is the topic of non-intrusive (i.e. without clean reference) speech quality prediction, for which neural networks are trained to predict human-assigned quality labels directly from distorted audio. When combined, these areas allow for the creation of powerful new speech enhancement systems which can leverage large real-world datasets of distorted audio, by taking inference of a pre-trained speech quality predictor as the sole loss function of the speech enhancement system. This paper aims to identify a potential pitfall with this approach, namely hallucinations which are introduced by the enhancement system `tricking' the speech quality predictor.
-                </div>
-              </p></li>
-            <li><p><i>SSSR In Loss Functions For Hearing Aid Speech Enhancement</i><br>
+              <div id="abstract10" style="display: none;">
+                <i>Abstract</i>: Within the area of speech enhancement, there is an ongoing interest in the creation of
+                neural systems which explicitly aim to improve the perceptual quality of the processed audio. In concert
+                with this is the topic of non-intrusive (i.e. without clean reference) speech quality prediction, for
+                which neural networks are trained to predict human-assigned quality labels directly from distorted
+                audio. When combined, these areas allow for the creation of powerful new speech enhancement systems
+                which can leverage large real-world datasets of distorted audio, by taking inference of a pre-trained
+                speech quality predictor as the sole loss function of the speech enhancement system. This paper aims to
+                identify a potential pitfall with this approach, namely hallucinations which are introduced by the
+                enhancement system `tricking' the speech quality predictor.
+              </div>
+              </p>
+            </li>
+            <li>
+              <p><i>SSSR In Loss Functions For Hearing Aid Speech Enhancement</i><br>
                 Accepted @ EUSIPCO 2024<br>
                 <i>Robert Sutherland, <u>George Close</u>, Thomas Hain, Stefan Goetze and Jon Barker</i><br>
                 <button onclick="toggleAbstract(11)">Show Abstract</button>
-                <div id="abstract11" style="display: none;">
-                  <i>Abstract</i>: Machine learning techniques are an active area of research for speech enhancement for hearing aids, with one particular focus on improving the intelligibility of a noisy speech signal. Recent work has shown that feature encodings from self-supervised speech representation models can effectively capture speech intelligibility. In this work, it is shown that the distance between self-supervised speech representations of clean and noisy speech correlates more strongly with human intelligibility ratings than other signal-based metrics. Experiments show that training a speech enhancement model using this distance as part of a loss function improves the performance over using an SNR-based loss function, demonstrated by an increase in HASPI, STOI, PESQ and SI-SNR scores. This method takes inference of a high parameter count model only at training time, meaning the speech enhancement model can remain smaller, as is required for hearing aids.
-              </p></li>
+              <div id="abstract11" style="display: none;">
+                <i>Abstract</i>: Machine learning techniques are an active area of research for speech enhancement for
+                hearing aids, with one particular focus on improving the intelligibility of a noisy speech signal.
+                Recent work has shown that feature encodings from self-supervised speech representation models can
+                effectively capture speech intelligibility. In this work, it is shown that the distance between
+                self-supervised speech representations of clean and noisy speech correlates more strongly with human
+                intelligibility ratings than other signal-based metrics. Experiments show that training a speech
+                enhancement model using this distance as part of a loss function improves the performance over using an
+                SNR-based loss function, demonstrated by an increase in HASPI, STOI, PESQ and SI-SNR scores. This method
+                takes inference of a high parameter count model only at training time, meaning the speech enhancement
+                model can remain smaller, as is required for hearing aids.
+                </p>
+            </li>
             <li>
               <p>
-                <i>Transcription-Free Fine-Tuning of Speech Separation Models for Noisy and Reverberant Multi-Speaker Automatic Speech Recognition</i><br>
+                <i>Transcription-Free Fine-Tuning of Speech Separation Models for Noisy and Reverberant Multi-Speaker
+                  Automatic Speech Recognition</i><br>
                 Accepted @ Interspeech 2024<br>
-                <i>William Ravenscroft, <u>George Close</u>, Stefan Goetze, Thomas Hain, Mohammad Soleymanpour, Anurag Chowdhury and Mark C. Fuhs</i><br>
+                <i>William Ravenscroft, <u>George Close</u>, Stefan Goetze, Thomas Hain, Mohammad Soleymanpour, Anurag
+                  Chowdhury and Mark C. Fuhs</i><br>
                 <button onclick="toggleAbstract(12)">Show Abstract</button>
-                <div id="abstract12" style="display: none;">
-                  <i>Abstract</i>: One solution to automatic speech recognition (ASR) of overlapping speakers is to separate speech and then perform ASR on the separated signals. Commonly, the separator produces artefacts which often degrade ASR performance. Addressing this issue typically requires reference transcriptions to jointly train the separation and ASR networks. This is often not viable for training on real-world in-domain audio where reference transcript information is not always available. This paper proposes a transcription-free method for joint training using only audio signals. The proposed method uses embedding differences of pre-trained ASR encoders as a loss with a proposed modification to permutation invariant training (PIT) called guided PIT (GPIT). The method gives a 6.4% improvement in word error rate (WER) measures over a signal-level loss and also shows enhancement improvements in perceptual measures such as short-time objective intelligibility (STOI).
-                </div>
+              <div id="abstract12" style="display: none;">
+                <i>Abstract</i>: One solution to automatic speech recognition (ASR) of overlapping speakers is to
+                separate speech and then perform ASR on the separated signals. Commonly, the separator produces
+                artefacts which often degrade ASR performance. Addressing this issue typically requires reference
+                transcriptions to jointly train the separation and ASR networks. This is often not viable for training
+                on real-world in-domain audio where reference transcript information is not always available. This paper
+                proposes a transcription-free method for joint training using only audio signals. The proposed method
+                uses embedding differences of pre-trained ASR encoders as a loss with a proposed modification to
+                permutation invariant training (PIT) called guided PIT (GPIT). The method gives a 6.4% improvement in
+                word error rate (WER) measures over a signal-level loss and also shows enhancement improvements in
+                perceptual measures such as short-time objective intelligibility (STOI).
+              </div>
               </p>
-            </li></div>
+            </li>
+        </div>
 
-          </ul>
-        <h2>Talks and Presentations</h2>
-          <ul>
-            <li><p><a  target= "_blank" href="https://aesfallconvention2022.sched.com/event/1Ay8V"> AES [TC-MLAI] 2022 Talk </a>-"Teaching AI to hear like we do: psychoacoustics in machine learning"</li></p>
-          </ul>
-
-        <h2>Interests</h2>
-
-        <p>
-        My research interests include:
-        <ul style="font-size: 1.2em;">
-        <li>Neural Speech Enhancement / Noise Reduction</li>
-        <li>Psychoacoustically Motivated Approaches</li>
-         <li>Automatic Speech Recognition</li>
-         <li>Speech Quality/Intelligibility Assessment Metrics and Prediction</li>
-          <li> Self Supervised Speech Representations / Foundational models</li>
-          <li> Deep Fake Detection / Adversially attacks on Neural Networks.</li>
         </ul>
-         <h2>Technical Skills</h2>
-        <ul style="font-size: 1.2em;">
-        <li>Python - PyTorch, Tensorflow, SciPy, SpeechBrain </li>
-        <li>CuDA</li>
-         <li>MATLAB</li>
-         <li>Linux/BASH</li>
-         <li>C++, Java, Haskell</li>
-        </ul></p>
-    
+        <h2>Talks and Presentations</h2>
+        <ul>
+          <li>
+            <p><a target="_blank" href="https://aesfallconvention2022.sched.com/event/1Ay8V"> AES [TC-MLAI] 2022 Talk
+              </a>-"Teaching AI to hear like we do: psychoacoustics in machine learning"
+          </li>
+          </p>
+        </ul>
 
-    <h2>Qualifications/Background</h2>
-    <p> Before starting at the CDT, I had completed an BSc undergraduate degree in Computer Science from <a  target= "_blank"
-        href="https://www.cardiff.ac.uk">Cardiff University</a>, with a First Class Honours.
-        <br>
-        <!-- I have A-Level qualifications in Mathematics, Futher Mathematics, Computing and Electronics.  -->
-
+        
+      </div>
       </p>
-    </div>
-        </p>
-    <a target= "_blank" href="https://github.com/leto19"><img alt="My github" src="github.png"
-        style="width:32px;height:32px;"></a>
-    <a target= "_blank" href="https://twitter.com/GeorgeCloseSLT"><img alt="My twitter" src="twitter.png"
-        style="width:32px;height:32px;"></a>
-      <a target= "_blank" href="https://www.linkedin.com/in/george-close-b78406248"><img alt="My LinkIn" src="ln.png"
-        style="width:32px;height:32px;"></a>
-      <a target="_blank" href="https://scholar.google.com/citations?user=xbeMIhMAAAAJ"><img alt="My Google Scholar" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
-        style="width:32px;height:32px;"></a>
+      <a target="_blank" href="https://github.com/leto19"><img alt="My github" src="github.png"
+          style="width:32px;height:32px;"></a>
+      <a target="_blank" href="https://twitter.com/GeorgeCloseSLT"><img alt="My twitter" src="twitter.png"
+          style="width:32px;height:32px;"></a>
+      <a target="_blank" href="https://www.linkedin.com/in/george-close-b78406248"><img alt="My LinkIn" src="ln.png"
+          style="width:32px;height:32px;"></a>
+      <a target="_blank" href="https://scholar.google.com/citations?user=xbeMIhMAAAAJ"><img alt="My Google Scholar"
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
+          style="width:32px;height:32px;"></a>
       <a target="_blank" href="mailto:glclose1@sheffield.ac.uk">📧</a>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     </div>
 </body>
 

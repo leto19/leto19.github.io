@@ -43,35 +43,35 @@
             style="width:256px;height:256px;border-radius:50%;">
           <p>Email: <a href="mailto:george.close@connex.ai"> george.close@connex.ai </a></p>
           <p>
-           I am a machine learning researcher with a focus on speech processing tasks.
+           I am a machine learning ("artificial intelligence") researcher with a focus on speech processing tasks.<br>
             I am currently working as a Speech Data Scientist at <a href="https://connex.ai/uk/">ConnexAI</a>.<br>
              I hold a PhD in Computer Science from the <a href="https://www.sheffield.ac.uk">University of Sheffield</a>, and a BSc in Computer Science from <a href="https://www.cardiff.ac.uk">Cardiff University</a>.<br>
-             My research interests include neural speech enhancement, automatic speech recognition, speech quality assessment and human perception of audio. 
-            I an an expert in a number of deep learning frameworks including PyTorch and TensorFlow, and have extensive experience with GPU clusters and Linux systems.
+             My research interests include neural speech enhancement, automatic speech recognition, speech quality assessment and human perception of audio.
+            I am an expert in a number of deep learning frameworks including PyTorch and TensorFlow, and have extensive experience with GPU clusters and Linux systems.
              <br>
           </p>
           <h2>Interests</h2>
         <p>
         <ul style="font-size: 1.2em;">
-          <li>Neural Speech Enhancement / Noise Reduction</li>
+          <li>Speech Enhancement / Noise Reduction</li>
           <li>Psychoacoustically motivated approaches</li>
           <li>Automatic Speech Recognition (ASR)</li>
           <li>Speech Quality / Intelligibility assessment metrics and prediction</li>
-          <li>Human perception of audio</li>
+          <li>Human perception of computer audio</li>
           <li>Neural systems for hearing aids and other low power devices</li>
           <li> Self Supervised Speech Representations / Foundational models</li>
           <li> Deep Fake Detection / Adversial attacks on neural networks.</li>
         </ul>
         <h2>Technical Skills</h2>
         <ul style="font-size: 1.2em;">
-          <li>Python - PyTorch, Tensorflow, SciPy, SpeechBrain </li>
+          <li>Python - PyTorch, Tensorflow, SciPy, SpeechBrain, Nvidia NeMo </li>
           <li>HuggingFace / OpenAI API</li>
-          <li>Git / GitHub</li>
+          <li>Git / GitHub /GitLab </li>
           <li>High performance computing / GPU clusters</li>
           <li>CuDA</li>
           <li>MATLAB</li>
           <li>Linux / BASH scripting</li>
-          <li>C++, Java, Haskell</li>
+          <li>C++, Java, Haskell, SQL</li>
         </ul>
         </p>
 
@@ -87,7 +87,7 @@
             <br> May 2024 - August 2024
           </p></li>
           <li><p>PhD Computer Science + GTA Teaching Assisstant<br>
-            Thesis Title: <i>Perceptually Motivated Speech Enhancement</i><br>
+            Thesis Title: <i><a href="https://etheses.whiterose.ac.uk/id/eprint/36577/1/_George__Thesis%20%285%29.pdf">Perceptually Motivated Speech Enhancement</a></i><br>
             University of Sheffield, UK <br>
              October 2020 - January 2025</p></li>
 
@@ -106,18 +106,39 @@
           <!-- I have A-Level qualifications in Mathematics, Futher Mathematics, Computing and Electronics.  -->
         </p>
           <h2>Papers and Publications</h2>
-          <p>I am an author on 12 papers, of which 9 I am first author. <br>
+          <p>I am an author on 14 papers, of which 10 I am first author. <br>
              <!-- My work has been published at a number of internationally recognoised conferences<br> -->
               <!-- including ICASSP, Interspeech and AES -->
             </p>
           <ul>
             
             
-            
+            <li>
+             <p><i>WhiSQA: Non-Intrusive Speech Quality Prediction Using Whisper Encoder Features</i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2508.02210"> arXiv </a>|
+                <a target="_blank" href="https://github.com/leto19/WhiSQA"> GitHub</a> |
+                Accepted @ SPECOM 2025 <br>
+                <i><u>George Close</u>, Kris Hong, Thomas Hain, Stefan Goetze<br></i>
+                <button onclick="toggleAbstract(12)">Show Abstract</button>
+              <div id="abstract12" style="display: none;">
+                <i>Abstract</i>:There has been significant research effort developing neural-network-based predictors of SQ in recent years. While a primary objective has been to develop non-intrusive, i.e.~reference-free, metrics to assess the performance of SE systems, recent work has also investigated the direct inference of neural SQ predictors within the loss function of downstream speech tasks. To aid in the training of SQ predictors, several large datasets of audio with corresponding human labels of quality have been created. Recent work in this area has shown that speech representations derived from large unsupervised or semi-supervised foundational speech models are useful input feature representations for neural SQ prediction. In this work, a novel and robust SQ predictor is proposed based on feature representations extracted from an ASR model, found to be a powerful input feature for the SQ prediction task. The proposed system achieves higher correlation with human MOS ratings than recent approaches on all NISQA test sets and shows significantly better domain adaption compared to the commonly used DNSMOS metric.
+              </div>
+              </p>
+            </li>
+      
            
-           
-            
-           
+            <li>
+             <p><i>Whilter: A Whisper-based Data Filter for "In-the-Wild" Speech Corpora Using Utterance-level Multi-Task Classification</i><br>
+                <a target="_blank" href="https://arxiv.org/abs/2507.21642"> arXiv </a>|
+                <a target="_blank" href="https://www.isca-archive.org/interspeech_2025/ravenscroft25_interspeech.html"> Interspeech 2025</a> |
+                <a target="_blank" href="https://zenodo.org/records/15534662"> Dataset</a><br>
+                <i>William Ravenscroft, <u>George Close</u>, Kit Bower-Morris, Jamie Stacey, Dmitry Sityaev, Kris Y. Hong<br></i>
+                <button onclick="toggleAbstract(11)">Show Abstract</button>
+              <div id="abstract11" style="display: none;">
+                <i>Abstract</i>:Large-scale in-the-wild speech datasets have become more prevalent in recent years due to increased interest in models that can learn useful features from unlabelled data for tasks such as speech recognition or synthesis. These datasets often contain undesirable features, such as multiple speakers, non-target languages, and music, which may impact model learning. The Whilter model is proposed as a multitask solution to identify these undesirable samples. Whilter uses a Whisper encoder with an attention-based classifier to solve five diverse classification problems at once. In addition, an annotated dataset is published for a subset of two popular in-the-wild corpora. Whilter achieves F1 scores above 85% and equal error rates of 6.5% to 7.8% for three of five subtasks, outperforming a state-of-the-art BEATs classifier on speech-specific classes, with a notable decrease in processing time compared to a combination of single-task alternatives. 
+              </div>
+              </p>
+            </li>
       
        
            

@@ -1,0 +1,36 @@
+name: Update Google Scholar Metrics
+
+on:
+  schedule:
+    # Run once a week on Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          pip install scholarly
+          
+      - name: Fetch Scholar metrics
+        run: |
+          python fetch_scholar_metrics.py
+          
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add scholar_metrics*.json
+          git diff --staged --quiet || git commit -m "Update Scholar metrics [automated]"
+          git push

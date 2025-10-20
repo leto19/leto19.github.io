@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Dr. George Close - Machine Learning Researcher and Speech Data Scientist specializing in speech enhancement, ASR, and neural speech processing">
+  <title>Dr. George Close | ML Researcher & Speech Scientist</title>
+  
+  <!-- Web 1.0 Style with Modern CSS -->
+  <style>
+    :root {
+      --primary-color: #0000EE;
+      --visited-color: #551A8B;
+      --accent-color: #FF6600;
+      --text-primary: #000000;
+      --text-secondary: #333333;
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F0F0F0;
+      --bg-gray: #C0C0C0;
+      --border-color: #000000;
+      --table-border: #808080;
+      --retro-blue: #0000FF;
+      --retro-cyan: #00FFFF;
+      --retro-lime: #00FF00;
+      --retro-yellow: #FFFF00;
+      --transition: all 0.2s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', 'Courier', monospace;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: #E0E0E0;
+      background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.03) 2px, rgba(0,0,0,.03) 4px);
+      -webkit-font-smoothing: auto;
+      -moz-osx-font-smoothing: auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0;
+      background: var(--bg-primary);
+      border: 3px solid var(--border-color);
+      box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+    }
+
+    /* Web 1.0 Header with classic gradient */
+    .hero {
+      background: linear-gradient(180deg, #6699CC 0%, #336699 50%, #003366 100%);
+      color: white;
+      padding: 20px;
+      border-bottom: 3px solid var(--border-color);
+      position: relative;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: repeating-linear-gradient(
+        90deg,
+        #FF0000 0px, #FF0000 10px,
+        #FFFF00 10px, #FFFF00 20px,
+        #00FF00 20px, #00FF00 30px,
+        #00FFFF 30px, #00FFFF 40px,
+        #0000FF 40px, #0000FF 50px,
+        #FF00FF 50px, #FF00FF 60px
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image {
+      margin: 0 auto 15px;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 0;
+      border: 4px solid #FFFFFF;
+      box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+      object-fit: cover;
+      transition: var(--transition);
+      image-rendering: auto;
+    }
+
+    .profile-img:hover {
+      border-color: var(--retro-yellow);
+    }
+
+    .hero h1 {
+      font-family: 'Courier New', monospace;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin-bottom: 15px;
+      line-height: 1.4;
+      text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+      justify-content: center;
+    }
+
+    .hero-badge {
+      background: #FFFF00;
+      color: #000000;
+      padding: 4px 12px;
+      border: 2px solid #000000;
+      font-size: 0.85rem;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* Classic web 1.0 link buttons */
+    .social-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      justify-content: center;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: #C0C0C0;
+      border: 2px outset #FFFFFF;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: #A0A0A0;
+      border-style: inset;
+    }
+
+    .social-link:active {
+      border-style: inset;
+    }
+
+    .social-link img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Main Content Area */
+    .main-content {
+      padding: 20px;
+      display: grid;
+      gap: 20px;
+    }
+
+    /* Web 1.0 style sections with table borders */
+    .card {
+      background: var(--bg-primary);
+      border: 2px solid var(--border-color);
+      padding: 0;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+    }
+
+    .card h2 {
+      background: linear-gradient(180deg, #C0C0C0 0%, #808080 100%);
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      margin: 0;
+      padding: 8px 15px;
+      font-weight: bold;
+      border-bottom: 2px solid var(--border-color);
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* About Section */
+    .about-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .about-content a {
+      color: var(--primary-color);
+      text-decoration: underline;
+      font-weight: normal;
+      transition: var(--transition);
+    }
+
+    .about-content a:visited {
+      color: var(--visited-color);
+    }
+
+    .about-content a:hover {
+      color: var(--accent-color);
+      background: #FFFF00;
+    }
+
+    /* Classic unordered lists with square bullets */
+    .styled-list {
+      list-style: square;
+      padding-left: 30px;
+      display: block;
+    }
+
+    .styled-list li {
+      padding: 3px 0;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Two Column Lists */
+    .two-column-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    /* Experience Items as classic table rows */
+    .experience-item {
+      padding: 12px;
+      background: #F5F5F5;
+      border: 1px solid #808080;
+      margin-bottom: 10px;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .experience-item:hover {
+      background: #FFFFCC;
+    }
+
+    .experience-title {
+      font-weight: bold;
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .experience-org {
+      color: var(--primary-color);
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .experience-org a {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    .experience-org a:visited {
+      color: var(--visited-color);
+    }
+
+    .experience-date {
+      color: #666666;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    /* Paper Items with classic layout */
+    .paper-item {
+      padding: 15px;
+      background: #FAFAFA;
+      border: 1px solid var(--table-border);
+      margin-bottom: 15px;
+      transition: var(--transition);
+    }
+
+    .paper-item:hover {
+      background: #FFFFEE;
+      border-color: var(--accent-color);
+    }
+
+    .paper-title {
+      font-weight: bold;
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1.4;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .paper-authors {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    .paper-venue {
+      color: #666666;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .paper-link, .abstract-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      background: #E0E0E0;
+      color: var(--text-primary);
+      text-decoration: none;
+      border: 2px outset #FFFFFF;
+      font-size: 0.8rem;
+      font-weight: bold;
+      transition: var(--transition);
+      cursor: pointer;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .paper-link:hover, .abstract-button:hover {
+      background: #D0D0D0;
+      border-style: inset;
+    }
+
+    .paper-link:active, .abstract-button:active {
+      border-style: inset;
+    }
+
+    .abstract-button {
+      background: #CCCCCC;
+    }
+
+    /* Web 1.0 style award badge */
+    .award-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      background: #FFFF00;
+      color: #000000;
+      border: 2px solid #000000;
+      font-weight: bold;
+      font-size: 0.85rem;
+      margin: 8px 0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .award-badge::before {
+      content: '★';
+      margin-right: 6px;
+      font-size: 1.2rem;
+      color: #FF0000;
+    }
+
+    .abstract-content {
+      display: none;
+      margin-top: 10px;
+      padding: 12px;
+      background: #F0F0F0;
+      border: 1px dashed #808080;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .abstract-content.show {
+      display: block;
+      animation: slideDown 0.2s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        max-height: 0;
+      }
+      to {
+        opacity: 1;
+        max-height: 1000px;
+      }
+    }
+
+    /* Stats Section as classic table */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+      margin-top: 15px;
+      border: 2px solid var(--border-color);
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #E0E0E0 100%);
+      border: 1px solid var(--table-border);
+      border-right: 2px solid var(--border-color);
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--retro-blue);
+      display: block;
+      font-family: 'Courier New', monospace;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    }
+
+    .stat-label {
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      margin-top: 5px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+    }
+
+    /* Footer with classic horizontal rule */
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      border-top: 3px double var(--border-color);
+      background: #F0F0F0;
+    }
+
+    .footer hr {
+      border: 0;
+      height: 2px;
+      background: var(--border-color);
+      margin: 10px auto;
+      width: 50%;
+    }
+
+    /* Animated construction GIF style blinker */
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .blink {
+      animation: blink 1s infinite;
+    }
+
+    /* Classic "NEW!" badge */
+    .new-badge {
+      display: inline-block;
+      background: #FF0000;
+      color: #FFFF00;
+      padding: 2px 6px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      margin-left: 5px;
+      border: 1px solid #000000;
+      animation: blink 1s infinite;
+    }
+
+    /* Horizontal rules */
+    hr {
+      border: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #808080, transparent);
+      margin: 20px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        margin: 10px;
+        border-width: 2px;
+        box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+      }
+
+      .hero {
+        padding: 15px;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+      }
+
+      .hero h2 {
+        font-size: 1rem;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+      }
+
+      .two-column-list {
+        grid-template-columns: 1fr;
+      }
+
+      .main-content {
+        padding: 15px;
+      }
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Loading Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .card {
+      animation: fadeIn 0.4s ease-out backwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.15s; }
+    .card:nth-child(4) { animation-delay: 0.2s; }
+    .card:nth-child(5) { animation-delay: 0.25s; }
+    .card:nth-child(6) { animation-delay: 0.3s; }
+
+    /* Classic visited/unvisited link colors throughout */
+    a {
+      color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    a:visited {
+      color: var(--visited-color);
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+  </style>
+
+  <!-- External Scholar Metrics Loader -->
+  <script src="scholar-metrics-loader.js"></script>
+  
+  <script>
+    function toggleAbstract(id) {
+      const abstractElement = document.getElementById('abstract' + id);
+      const button = event.target;
+      
+      if (abstractElement.classList.contains('show')) {
+        abstractElement.classList.remove('show');
+        button.textContent = 'Show Abstract';
+      } else {
+        abstractElement.classList.add('show');
+        button.textContent = 'Hide Abstract';
+      }
+    }
+
+    // Load and update Scholar metrics on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      // Try to load metrics from JSON file
+      updateScholarMetrics();
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="me2.JPG" alt="Dr. George Close" class="profile-img">
+        </div>
+        <div class="hero-text">
+          <h1>DR. GEORGE CLOSE</h1>
+          <h2>Machine Learning Researcher & Speech Data Scientist</h2>
+          <div class="hero-meta">
+            <div class="hero-badge">📧 george@zyphra.com</div>
+            <div class="hero-badge">📍 San Francisco, CA</div>
+            <div class="hero-badge">🎓 PhD Computer Science</div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/leto19" class="social-link" target="_blank" aria-label="GitHub">
+              <img src="github.png" alt="GitHub">
+            </a>
+            <a href="https://twitter.com/GeorgeCloseSLT" class="social-link" target="_blank" aria-label="Twitter">
+              <img src="twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/in/george-close-b78406248" class="social-link" target="_blank" aria-label="LinkedIn">
+              <img src="ln.png" alt="LinkedIn">
+            </a>
+            <a href="https://scholar.google.com/citations?user=xbeMIhMAAAAJ" class="social-link" target="_blank" aria-label="Google Scholar">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      
+      <!-- About Section -->
+      <section class="card">
+        <h2>About</h2>
+        <div class="card-content">
+          <div class="about-content">
+            <p>
+              I am a machine learning/cybernetics (so called "artificial intelligence") researcher with a focus on speech processing tasks.
+              I am currently a member of technical staff at <a href="https://zyphra.com" target="_blank">Zyphra</a>.
+            </p>
+            <p style="margin-top: 1rem;">
+              I hold a PhD in Computer Science from the <a href="https://www.sheffield.ac.uk" target="_blank">University of Sheffield</a>, 
+              and a BSc in Computer Science from <a href="https://www.cardiff.ac.uk" target="_blank">Cardiff University</a>.
+            </p>
+            <p style="margin-top: 1rem;">
+              My research interests include neural speech enhancement, automatic speech recognition, speech quality assessment and human perception of audio.
+              I am an expert in a number of deep learning frameworks including PyTorch and TensorFlow, and have extensive experience with GPU clusters and Linux systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Interests & Skills -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+        
+        <!-- Research Interests -->
+        <section class="card">
+          <h2>Research Interests</h2>
+          <div class="card-content">
+            <ul class="styled-list">
+              <li>Speech Enhancement / Noise Reduction</li>
+              <li>Text To Speech</li>
+              <li>Psychoacoustically motivated approaches</li>
+              <li>Automatic Speech Recognition (ASR)</li>
+              <li>Speech Quality / Intelligibility assessment</li>
+              <li>Human perception of computer audio</li>
+              <li>Neural systems for hearing aids</li>
+              <li>Self Supervised Speech Representations</li>
+              <li>Deep Fake Detection / Adversarial attacks</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="card">
+          <h2>Technical Skills</h2>
+          <div class="card-content">
+            <ul class="styled-list">
+              <li>Python - PyTorch, TensorFlow, SciPy</li>
+              <li>SpeechBrain, Nvidia NeMo</li>
+              <li>HuggingFace / OpenAI API</li>
+              <li>Git / GitHub / GitLab</li>
+              <li>High performance computing / GPU clusters</li>
+              <li>CUDA</li>
+              <li>MATLAB</li>
+              <li>Linux / BASH scripting</li>
+              <li>C++, Java, Haskell, SQL</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Experience & Education -->
+      <section class="card">
+        <h2>Experience & Education</h2>
+        <div class="card-content">
+        
+          <div class="experience-item">
+            <div class="experience-title">Member of Technical Staff</div>
+            <div class="experience-org">Zyphra</div>
+            <div class="experience-date">San Francisco, CA, USA | September 2025 - Present</div>
+          </div>
+
+        <div class="experience-item">
+          <div class="experience-title">Speech Data Scientist</div>
+          <div class="experience-org">ConnexAI</div>
+          <div class="experience-date">Manchester, UK | November 2024 - September 2025</div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">Research Intern</div>
+          <div class="experience-org"><a href="https://www.yamaha.com/en/tech-design/research/" target="_blank" style="color: inherit;">Yamaha Research and Development</a></div>
+          <div class="experience-date">Hamamatsu, Japan | May 2024 - August 2024</div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">PhD Computer Science + GTA Teaching Assistant</div>
+          <div class="experience-org">University of Sheffield</div>
+          <div class="experience-date">Sheffield, UK | October 2020 - January 2025</div>
+          <div style="margin-top: 0.5rem; color: var(--text-secondary);">
+            Thesis: <i><a href="https://etheses.whiterose.ac.uk/id/eprint/36577/1/_George__Thesis%20%285%29.pdf" target="_blank" style="color: var(--primary-color);">Perceptually Motivated Speech Enhancement</a></i>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">BSc Computer Science (First Class Honours)</div>
+          <div class="experience-org">Cardiff University</div>
+          <div class="experience-date">Cardiff, UK | August 2017 - August 2020</div>
+          <div style="margin-top: 0.5rem; color: var(--text-secondary);">
+            Thesis: <i>Majel - Voice control for Command Line Interfaces</i>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Publications Overview -->
+      <section class="card">
+        <h2>Publication Metrics</h2>
+        <div class="card-content">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-number">14</span>
+              <span class="stat-label">Total Papers</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">10</span>
+              <span class="stat-label">First Author</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">135</span>
+              <span class="stat-label">Citations</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">7</span>
+              <span class="stat-label">h-index</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Publications -->
+      <section class="card">
+        <h2>Selected Publications</h2>
+        <div class="card-content">
+
+        <div class="paper-item">
+          <div class="paper-title">WhiSQA: Non-Intrusive Speech Quality Prediction Using Whisper Encoder Features</div>
+          <div class="paper-authors"><u>George Close</u>, Kris Hong, Thomas Hain, Stefan Goetze</div>
+          <div class="paper-venue">SPECOM 2025</div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2508.02210" class="paper-link" target="_blank">arXiv</a>
+            <a href="https://github.com/leto19/WhiSQA" class="paper-link" target="_blank">GitHub</a>
+            <button class="abstract-button" onclick="toggleAbstract(1)">Show Abstract</button>
+          </div>
+          <div id="abstract1" class="abstract-content">
+            There has been significant research effort developing neural-network-based predictors of SQ in recent years. While a primary objective has been to develop non-intrusive, i.e. reference-free, metrics to assess the performance of SE systems, recent work has also investigated the direct inference of neural SQ predictors within the loss function of downstream speech tasks. To aid in the training of SQ predictors, several large datasets of audio with corresponding human labels of quality have been created. Recent work in this area has shown that speech representations derived from large unsupervised or semi-supervised foundational speech models are useful input feature representations for neural SQ prediction. In this work, a novel and robust SQ predictor is proposed based on feature representations extracted from an ASR model, found to be a powerful input feature for the SQ prediction task. The proposed system achieves higher correlation with human MOS ratings than recent approaches on all NISQA test sets and shows significantly better domain adaption compared to the commonly used DNSMOS metric.
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">Whilter: A Whisper-based Data Filter for "In-the-Wild" Speech Corpora Using Utterance-level Multi-Task Classification</div>
+          <div class="paper-authors">William Ravenscroft, <u>George Close</u>, Kit Bower-Morris, Jamie Stacey, Dmitry Sityaev, Kris Y. Hong</div>
+          <div class="paper-venue">Interspeech 2025</div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2507.21642" class="paper-link" target="_blank">arXiv</a>
+            <a href="https://www.isca-archive.org/interspeech_2025/ravenscroft25_interspeech.html" class="paper-link" target="_blank">Interspeech 2025</a>
+            <a href="https://zenodo.org/records/15534662" class="paper-link" target="_blank">Dataset</a>
+            <button class="abstract-button" onclick="toggleAbstract(2)">Show Abstract</button>
+          </div>
+          <div id="abstract2" class="abstract-content">
+            Large-scale in-the-wild speech datasets have become more prevalent in recent years due to increased interest in models that can learn useful features from unlabelled data for tasks such as speech recognition or synthesis. These datasets often contain undesirable features, such as multiple speakers, non-target languages, and music, which may impact model learning. The Whilter model is proposed as a multitask solution to identify these undesirable samples. Whilter uses a Whisper encoder with an attention-based classifier to solve five diverse classification problems at once. In addition, an annotated dataset is published for a subset of two popular in-the-wild corpora. Whilter achieves F1 scores above 85% and equal error rates of 6.5% to 7.8% for three of five subtasks, outperforming a state-of-the-art BEATs classifier on speech-specific classes, with a notable decrease in processing time compared to a combination of single-task alternatives.
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">Hallucination in Perceptual Metric-Driven Speech Enhancement Networks</div>
+          <div class="paper-authors"><u>George Close</u>, Thomas Hain, Stefan Goetze</div>
+          <div class="paper-venue">EUSIPCO 2024</div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2403.11732" class="paper-link" target="_blank">arXiv</a>
+            <a href="https://ieeexplore.ieee.org/document/10714927" class="paper-link" target="_blank">EUSIPCO 2024</a>
+            <a href="nisqa_se_demo.html" class="paper-link" target="_blank">Listening Test Examples</a>
+            <button class="abstract-button" onclick="toggleAbstract(3)">Show Abstract</button>
+          </div>
+          <div id="abstract3" class="abstract-content">
+            Within the area of speech enhancement, there is an ongoing interest in the creation of neural systems which explicitly aim to improve the perceptual quality of the processed audio. In concert with this is the topic of non-intrusive (i.e. without clean reference) speech quality prediction, for which neural networks are trained to predict human-assigned quality labels directly from distorted audio. When combined, these areas allow for the creation of powerful new speech enhancement systems which can leverage large real-world datasets of distorted audio, by taking inference of a pre-trained speech quality predictor as the sole loss function of the speech enhancement system. This paper aims to identify a potential pitfall with this approach, namely hallucinations which are introduced by the enhancement system 'tricking' the speech quality predictor.
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">Non-Intrusive Speech Intelligibility Prediction for Hearing-Impaired Users using Intermediate ASR Features and Human Memory Models</div>
+          <div class="paper-authors">Rhiannon Mogridge, <u>George Close</u>, Robert Sutherland, Thomas Hain, Jon Barker, Stefan Goetze, Anton Ragni</div>
+          <div class="paper-venue">ICASSP 2024</div>
+          <div class="award-badge">2nd Place - Clarity Prediction Challenge 2</div>
+          <div class="paper-links">
+            <a href="https://claritychallenge.org/clarity2023-workshop/papers/CPC2_E002_report.pdf" class="paper-link" target="_blank">Technical Report</a>
+            <a href="https://arxiv.org/abs/2401.13611" class="paper-link" target="_blank">arXiv</a>
+            <a href="https://ieeexplore.ieee.org/document/10447597/authors" class="paper-link" target="_blank">ICASSP 2024</a>
+            <button class="abstract-button" onclick="toggleAbstract(4)">Show Abstract</button>
+          </div>
+          <div id="abstract4" class="abstract-content">
+            Neural networks have been successfully used for non-intrusive speech intelligibility prediction. Recently, the use of feature representations sourced from intermediate layers of pre-trained self-supervised and weakly-supervised models has been found to be particularly useful for this task. This work combines the use of Whisper ASR decoder layer representations as neural network input features with an exemplar-based, psychologically motivated model of human memory to predict human intelligibility ratings for hearing-aid users. Substantial performance improvement over an established intrusive HASPI baseline system is found, including on enhancement systems and listeners unseen in the training data, with a root mean squared error of 25.3 compared with the baseline of 28.7.
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">Multi-CMGAN+/+: Leveraging Multi-Objective Speech Quality Metric Prediction for Speech Enhancement</div>
+          <div class="paper-authors"><u>George Close</u>, Thomas Hain, Stefan Goetze</div>
+          <div class="paper-venue">ICASSP 2024</div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2312.08979" class="paper-link" target="_blank">arXiv</a>
+            <a href="https://ieeexplore.ieee.org/document/10448343" class="paper-link" target="_blank">ICASSP 2024</a>
+            <a href="https://github.com/leto19/MultiMetricGANplusplus" class="paper-link" target="_blank">GitHub</a>
+            <button class="abstract-button" onclick="toggleAbstract(5)">Show Abstract</button>
+          </div>
+          <div id="abstract5" class="abstract-content">
+            Neural network based approaches to speech enhancement have shown to be particularly powerful, being able to leverage a data-driven approach to result in a significant performance gain versus other approaches. Such approaches are reliant on artificially created labelled training data such that the neural model can be trained using intrusive loss functions which compare the output of the model with clean reference speech. Performance of such systems when enhancing real-world audio often suffers relative to their performance on simulated test data. In this work, a non-intrusive multi-metric prediction approach is introduced, wherein a model trained on artificial labelled data using inference of an adversarially trained metric prediction neural network. The proposed approach shows improved performance versus state-of-the-art systems on the recent CHiME-7 challenge unsupervised domain adaptation speech enhancement (UDASE) task evaluation sets.
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">CMGAN+/+: The University of Sheffield CHiME-7 UDASE Challenge Speech Enhancement System</div>
+          <div class="paper-authors"><u>George Close</u>, William Ravenscroft, Thomas Hain, Stefan Goetze</div>
+          <div class="paper-venue">CHiME 2024 UDASE Challenge</div>
+          <div class="award-badge">CHiME Challenge Entry</div>
+          <div class="paper-links">
+            <a href="https://www.chimechallenge.org/challenges/chime7/task2/documents/Close_CMGAN++.pdf" class="paper-link" target="_blank">Technical Report</a>
+            <a href="https://www.chimechallenge.org/challenges/chime7/task2/results" class="paper-link" target="_blank">Challenge Results</a>
+            <button class="abstract-button" onclick="toggleAbstract(6)">Show Abstract</button>
+          </div>
+          <div id="abstract6" class="abstract-content">
+            The CHiME-7 unsupervised domain adaptation speech enhancement (UDASE) challenge targets in-domain adaptation to unlabelled speech data. This paper describes the University of Sheffield team's system submitted for the challenge. A generative adversarial network (GAN) structure is employed as opposed to the unsupervised RemixIT method proposed in the baseline system. The system uses a conformer-based metric GAN (CMGAN) structure. The discriminator part of the GAN is trained to predict the output of a DNSMOS model. Data augmentation strategies are employed which enable training on historical training data as well as miscellaneous data from an additional generator. The proposed approach, referred to as CMGAN+/+, achieves significant improvement in DNSMOS evaluation metrics with the best proposed system achieving 3.40 OVR-MOS, an 18% improvement over the baselines.
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">Perceive and predict: Self-Supervised Speech Representation Based Loss Functions for Speech Enhancement</div>
+          <div class="paper-authors"><u>George Close</u>, William Ravenscroft, Thomas Hain, Stefan Goetze</div>
+          <div class="paper-venue">ICASSP 2023</div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2301.04388" class="paper-link" target="_blank">arXiv</a>
+            <a href="https://ieeexplore.ieee.org/document/10095666" class="paper-link" target="_blank">ICASSP 2023</a>
+            <a href="icassp/audio_egs.html" class="paper-link" target="_blank">Audio Examples</a>
+            <button class="abstract-button" onclick="toggleAbstract(7)">Show Abstract</button>
+          </div>
+          <div id="abstract7" class="abstract-content">
+            Recent work in the domain of speech enhancement has explored the use of self-supervised speech representations to aid in the training of neural speech enhancement models. However, much of this work focuses on using the deepest or final outputs of self supervised speech representation models, rather than the earlier feature encodings. The use of self supervised representations in such a way is often not fully motivated. In this work it is shown that the distance between the feature encodings of clean and noisy speech correlate strongly with psychoacoustically motivated measures of speech quality and intelligibility, as well as with human Mean Opinion Score (MOS) ratings. Experiments using this distance as a loss function are performed and improved performance over the use of STFT spectrogram distance based loss as well as other common loss functions from speech enhancement literature is demonstrated using objective measures such as perceptual evaluation of speech quality (PESQ) and short-time objective intelligibility (STOI).
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">PAMGAN+/-: Improving Phase Aware Speech Enhancement Performance via Expanded Discriminator Training</div>
+          <div class="paper-authors"><u>George Close</u>, Thomas Hain, Stefan Goetze</div>
+          <div class="paper-venue">154th AES Convention Europe 2023</div>
+          <div class="award-badge">Winner - Student Technical Paper Award</div>
+          <div class="paper-links">
+            <a href="https://www.aes.org/e-lib/browse.cfm?elib=22063" class="paper-link" target="_blank">AES Paper</a>
+            <button class="abstract-button" onclick="toggleAbstract(8)">Show Abstract</button>
+          </div>
+          <div id="abstract8" class="abstract-content">
+            Recent speech enhancement work, which makes use of neural networks trained with a loss derived in part using an adversarial metric prediction network, has shown to be very effective. However, by limiting the data used to train this metric prediction network to only the clean reference and the output of the speech enhancement network, only a limited range of the metric is learnt. Additionally, such speech enhancement systems are limited because they typically operate solely over magnitude spectrogram representations so they do not encode phase information. In this work, recent developments for phase-aware speech enhancement in such an adversarial framework are expanded in two ways to enable the metric prediction network to learn a full range of metric scores. Firstly, the metric predictor is also exposed to unenhanced 'noisy' data during training. Furthermore, an additional network is introduced and trained alongside which attempts to produce outputs with a fixed 'lower' target metric score, and expose the metric predictor to these 'de-enhanced' outputs. It is found that performance increases versus a baseline system utilising a magnitude spectrogram speech enhancement network.
+          </div>
+        </div>
+
+        <div class="paper-item">
+          <div class="paper-title">MetricGAN+/- Increasing Robustness of Noise Reduction on Unseen Data</div>
+          <div class="paper-authors"><u>George Close</u>, Thomas Hain, Stefan Goetze</div>
+          <div class="paper-venue">EUSIPCO 2022</div>
+          <div class="paper-links">
+            <a href="https://arxiv.org/abs/2203.12369" class="paper-link" target="_blank">arXiv</a>
+            <a href="https://ieeexplore.ieee.org/document/9909682" class="paper-link" target="_blank">EUSIPCO 2022</a>
+            <a href="mg-minus.html" class="paper-link" target="_blank">Audio Examples</a>
+            <button class="abstract-button" onclick="toggleAbstract(9)">Show Abstract</button>
+          </div>
+          <div id="abstract9" class="abstract-content">
+            Training of speech enhancement systems often does not incorporate knowledge of human perception and thus can lead to unnatural sounding results. Incorporating psychoacoustically motivated speech perception metrics as part of model training via a predictor network has recently gained interest. However, the performance of such predictors is limited by the distribution of metric scores that appear in the training data. In this work, we propose MetricGAN+/- (an extension of MetricGAN+, one such metric-motivated system) which introduces an additional network - a "de-generator" which attempts to improve the robustness of the prediction network (and by extension of the generator) by ensuring observation of a wider range of metric scores in training. Experimental results on the VoiceBank-DEMAND dataset show relative improvement in PESQ score of 3.8% (3.05 vs 3.22 PESQ score), as well as better generalisation to unseen noise and speech.
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+      <!-- Talks and Presentations -->
+      <section class="card">
+        <h2>Talks & Presentations</h2>
+        <div class="card-content">
+          <div class="paper-item">
+          <div class="paper-title">Teaching AI to hear like we do: psychoacoustics in machine learning</div>
+          <div class="paper-venue">AES [TC-MLAI] 2022 Talk</div>
+          <div class="paper-links">
+            <a href="https://aesfallconvention2022.sched.com/event/1Ay8V" class="paper-link" target="_blank">View Talk</a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <hr>
+      <p><b>© 2025 Dr. George Close</b></p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+        Last updated: October 2025
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem; font-family: 'Courier New', monospace;">
+        <i>Best viewed with any browser</i>
+      </p>
+    </footer>
+
+  </div>
+</body>
+
+</html>

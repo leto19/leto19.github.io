@@ -1,185 +1,64 @@
-# Automatic Google Scholar Metrics Update
+# Google Scholar Metrics (Manual Update)
 
-This repository includes multiple solutions for automatically fetching and displaying Google Scholar metrics (citations, h-index) on your personal website.
+This site displays Google Scholar metrics (citations, h-index) on the homepage.
+The numbers are loaded dynamically from a small JSON file and updated **by hand**.
 
-## 📊 Overview
+## How it works now
 
-Google Scholar doesn't provide an official API, so we use various workarounds:
+1. `scholar_metrics_simple.json` holds the current metrics.
+2. `scholar-metrics-loader.js` (loaded at the bottom of `index.html`) reads that
+   JSON and animates the citation count + h-index into the stat cards, and adds a
+   "Scholar metrics updated" date to the footer.
+3. There is **no live scraping** of Google Scholar on page load.
 
-1. **Recommended: Python Script + GitHub Actions** (automated, reliable)
-2. **Node.js Proxy Server** (for dynamic updates)
-3. **Client-side JavaScript** (simple but limited)
+## Why it's manual (not automated)
 
-## ✅ Recommended Solution: Python + GitHub Actions
+The original design used the `scholarly` Python library in a weekly GitHub
+Action (`.github/workflows/update-scholar-metrics.yml`) to scrape Scholar and
+commit fresh JSON. In practice this **does not work reliably**: Google Scholar
+has no public API and blocks automated requests from cloud IPs (CAPTCHA / rate
+limits). The scheduled runs failed repeatedly and the workflow was auto-disabled
+after inactivity. Robust automation would require a paid/proxy scraping service,
+which is overkill for a personal site whose metrics change a few times a year.
 
-This is the **best approach for GitHub Pages** sites.
+So: update by hand. It takes ~30 seconds.
 
-### Setup Steps:
+## How to update (the only step you need)
 
-#### 1. Install Python Dependencies Locally
+1. Open your Scholar profile:
+   https://scholar.google.com/citations?user=nvdSIdEAAAAJ
+2. Note the **Citations (All)**, **h-index (All)**, and **i10-index (All)** from
+   the metrics table on the right.
+3. Edit `scholar_metrics_simple.json` with the new values and today's date:
 
-```bash
-pip install scholarly
-```
+   ```json
+   {
+     "name": "George Close",
+     "affiliation": "Zyphra",
+     "citations": 161,
+     "hIndex": 8,
+     "i10Index": 7,
+     "publications": 15,
+     "lastUpdated": "2026-06-30T00:00:00.000000",
+     "scholarUrl": "https://scholar.google.com/citations?user=nvdSIdEAAAAJ"
+   }
+   ```
 
-#### 2. Test the Script Manually
+4. Commit and push. Pages rebuilds automatically; the homepage shows the new
+   numbers.
 
-```bash
-python fetch_scholar_metrics.py
-```
+> Note: the loader currently updates **citations** and **h-index** on the page.
+> The hardcoded publication count in `index.html` is maintained separately
+> (keep it consistent with the actual publications list).
 
-This will create two files:
-- `scholar_metrics.json` - Full metrics
-- `scholar_metrics_simple.json` - Simple metrics for web display
+## Leftover files (optional cleanup)
 
-#### 3. Commit the JSON Files
+These were part of the abandoned auto-scrape approach and are no longer used by
+the live site. Safe to delete if you want a tidier repo:
 
-```bash
-git add scholar_metrics_simple.json
-git commit -m "Add Scholar metrics"
-git push
-```
+- `fetch_scholar_metrics.py`, `fetch_scholar_metrics_simple.py` (scrapers)
+- `scholar-proxy.js` (local Node proxy, never deployed)
+- `scholar_metrics.json` (duplicate of the `_simple` file)
+- `.github/workflows/update-scholar-metrics.yml` (disabled workflow)
 
-#### 4. Enable GitHub Actions
-
-The workflow file `.github/workflows/update-scholar-metrics.yml` is already created.
-
-- It runs automatically **every Monday at midnight UTC**
-- You can also trigger it manually from the "Actions" tab in GitHub
-
-#### 5. The Website Automatically Loads the Metrics
-
-The `scholar-metrics-loader.js` script automatically:
-- Loads metrics from `scholar_metrics_simple.json`
-- Updates the citation count and h-index on the page
-- Animates the numbers for a smooth effect
-- Shows the last update date
-
-### Manual Update
-
-To update metrics manually at any time:
-
-```bash
-python fetch_scholar_metrics.py
-git add scholar_metrics_simple.json
-git commit -m "Update Scholar metrics"
-git push
-```
-
-## 🔄 Alternative: Node.js Proxy Server
-
-If you want real-time updates (not suitable for GitHub Pages):
-
-### Setup:
-
-```bash
-npm install express axios cheerio cors
-node scholar-proxy.js
-```
-
-Then update your website to fetch from: `http://localhost:3000/api/scholar-metrics?id=xbeMIhMAAAAJ`
-
-**Note:** This requires a running server and won't work on GitHub Pages.
-
-## 📝 How It Works
-
-### Python Script (`fetch_scholar_metrics.py`)
-
-1. Uses the `scholarly` library to fetch data from Google Scholar
-2. Extracts citations, h-index, i10-index
-3. Saves to JSON files
-4. Can be automated via GitHub Actions
-
-### JavaScript Loader (`scholar-metrics-loader.js`)
-
-1. Fetches the JSON file from your repository
-2. Updates the DOM elements on your page
-3. Animates the counter for visual appeal
-4. Handles errors gracefully (falls back to default values)
-
-### GitHub Actions Workflow
-
-1. Runs on a schedule (weekly)
-2. Executes the Python script
-3. Commits updated JSON files
-4. Pushes changes to the repository
-
-## 🎯 Your Scholar ID
-
-Your Google Scholar ID is: `xbeMIhMAAAAJ`
-
-Found in your Scholar URL: `https://scholar.google.com/citations?user=xbeMIhMAAAAJ`
-
-## 🔧 Customization
-
-### Change Update Frequency
-
-Edit `.github/workflows/update-scholar-metrics.yml`:
-
-```yaml
-schedule:
-  - cron: '0 0 * * 1'  # Weekly on Monday
-  # Other options:
-  # - cron: '0 0 * * *'   # Daily
-  # - cron: '0 0 1 * *'   # Monthly
-```
-
-### Add More Metrics
-
-In `scholar-metrics-loader.js`, you can display i10-index:
-
-```javascript
-// Add to your HTML:
-<div class="stat-card">
-  <span class="stat-number i10-index-value">XX</span>
-  <span class="stat-label">i10-index</span>
-</div>
-```
-
-## 🚨 Limitations
-
-1. **Rate Limiting**: Google Scholar may block frequent requests
-   - GitHub Actions approach minimizes this (weekly updates)
-   
-2. **CORS Issues**: Direct browser requests to Scholar are blocked
-   - Solution: Use pre-fetched JSON files
-   
-3. **No Official API**: These are workarounds that may break if Google changes their site structure
-
-## 🆘 Troubleshooting
-
-### Metrics not updating?
-
-1. Check if `scholar_metrics_simple.json` exists in your repo
-2. Check GitHub Actions tab for workflow status
-3. Check browser console for JavaScript errors
-4. Verify the JSON file is accessible: `https://leto19.github.io/scholar_metrics_simple.json`
-
-### Python script fails?
-
-```bash
-# Update scholarly library
-pip install --upgrade scholarly
-
-# Check your Scholar ID
-python -c "from scholarly import scholarly; print(scholarly.search_author_id('xbeMIhMAAAAJ'))"
-```
-
-### Metrics show old values?
-
-- Clear browser cache
-- Check the `lastUpdated` timestamp in `scholar_metrics_simple.json`
-- Trigger GitHub Actions manually
-
-## 📚 Resources
-
-- [scholarly library documentation](https://scholarly.readthedocs.io/)
-- [GitHub Actions documentation](https://docs.github.com/en/actions)
-- Your Scholar profile: https://scholar.google.com/citations?user=xbeMIhMAAAAJ
-
-## 🎉 Quick Start
-
-1. Run: `python fetch_scholar_metrics.py`
-2. Commit: `git add scholar_metrics_simple.json && git commit -m "Add metrics"`
-3. Push: `git push`
-4. Your website now automatically displays updated metrics!
+Kept for reference unless removed.

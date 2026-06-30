@@ -60,7 +60,7 @@ def save_to_json(metrics, filename='scholar_metrics.json'):
 
 def main():
     # Your Google Scholar ID
-    SCHOLAR_ID = 'xbeMIhMAAAAJ'
+    SCHOLAR_ID = 'nvdSIdEAAAAJ'
     
     print(f"Fetching metrics for Scholar ID: {SCHOLAR_ID}")
     metrics = fetch_scholar_metrics(SCHOLAR_ID)

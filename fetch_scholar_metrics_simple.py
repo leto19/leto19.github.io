@@ -106,7 +106,7 @@ def save_to_json(metrics, filename='scholar_metrics.json'):
 
 def main():
     # Your Google Scholar ID
-    SCHOLAR_ID = 'xbeMIhMAAAAJ'
+    SCHOLAR_ID = 'nvdSIdEAAAAJ'
     
     print("=" * 50)
     print("Google Scholar Metrics Fetcher")

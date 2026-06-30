@@ -65,7 +65,7 @@ async function updateScholarMetrics() {
     });
     
     // Add or update metrics update notice
-    const footer = document.querySelector('.footer');
+    const footer = document.querySelector('.site-footer');
     if (footer) {
       let metricsNote = document.querySelector('.metrics-update');
       if (!metricsNote) {
